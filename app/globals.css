@@ -1,26 +1,32 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-roboto: var(--font-roboto);
+  --font-roboto-condensed: var(--font-roboto-condensed);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer components {
+  .nav-btn {
+    @apply border shrink-0 border-[#0A5559]
+           rounded-3xl
+           py-[0.1rem]
+           w-[7.9rem]
+           bg-transparent
+           font-roboto-condensed
+           text-[1.2rem]
+           font-normal
+           text-[#145659]
+           cursor-pointer
+           transition
+           duration-200
+           hover:bg-[#0A5559]
+           hover:text-[#d2f3f5];
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+
+@utility flex-between {
+  @apply flex justify-between items-center;
 }
+
