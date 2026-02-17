@@ -3,6 +3,7 @@
 @theme {
   --font-roboto: var(--font-roboto);
   --font-roboto-condensed: var(--font-roboto-condensed);
+  --font-fugaz-one: var(--font-fugaz-one);
 }
 
 @layer components {

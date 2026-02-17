@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
  
-    <header className="flex-between w-full h-6 px-[4vw] py-15 fixed z-50">
+    <header className="flex-between w-full h-6 px-[4vw] py-15 top-0">
         <div className="flex-none">
             <Image
                 src="/home_elements/icon.svg"

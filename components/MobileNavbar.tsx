@@ -37,16 +37,15 @@ const MobileNavbar = () => {
         )}
         <div className={`
             fixed 
-            z-60 
             top-0 
-            right-0 
+            left-0 
             h-screen
-            w-60
+            w-[50vw]
             transition-all 
             duration-300
             pointer-events-none
             overflow-hidden
-            ${isOpen? "translate-x-0" : "translate-x-full"}`
+            ${isOpen? "translate-x-0" : "-translate-x-full"}`
         }>
             <div className={`
                 flex
@@ -59,7 +58,7 @@ const MobileNavbar = () => {
                 w-full
                 h-full
                 pointer-events-auto
-                ${isOpen? "translate-x-0" : "-translate-x-full"}`
+                ${isOpen? "translate-x-0" : "translate-x-full"}`
             }>
                 <div className='flex flex-col gap-4 mb-[5vh] mt-[3vh] w-full'>
                     <button className='bg-transparent font-roboto-condensed text-[1.4rem] text-[#d2f3f5] cursor-pointer' onClick={handleButtonClick}>Store</button>
