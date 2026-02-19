@@ -132,7 +132,7 @@ export default function Home() {
                   </h2>
             </div>
             
-            <div className="flex gap-11 overflow-x-auto ml-20">
+            <div className="flex gap-11 overflow-x-auto">
               {
                 products.map((product, index) => (
                     
@@ -166,8 +166,8 @@ export default function Home() {
         </section>
 
 
-        <div className="pt-[2rem] bg-[#F9F2CE]  [@media(min-width:1515px)]:min-h-[110vh]">
-          <section className="flex flex-col lg:flex-row justify-center items-center sm:gap-45">
+        <div className="pt-[2rem] bg-[#F9F2CE] [@media(min-width:1515px)]:min-h-[110vh]">
+          <section className="flex flex-col lg:flex-row justify-center items-center sm:gap-45 overflow-hidden pt-10 sm:pt-0">
               <div className="flex flex-col items-start gap-15 sm:gap-14 shrink sm:shrink-0 relative lg:ml-[-25] lg:pt-17">
                 <Image 
                   src="/home_elements/image-9.svg"
