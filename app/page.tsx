@@ -1,24 +1,30 @@
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
+import products from "@/app/productsDb"
 
 
 
 export default function Home() {
+  const bgProductColor = ["#EBE1AA", "#7CCAC1", "#f1c6d2"];
   return (
     <>
-      <div className="bg-[url('/background/backgroundhr.png')] 
+      <div className="
+        [@media(max-height:350px)]:bg-repeat
+        [@media(max-height:350px)]:bg-cover
+        [@media(max-height:350px)]:bg-[url('/background/image.png')]
+        bg-[url('/background/backgroundhr.png')] 
         bg-cover 
         bg-no-repeat 
         lg:bg-center
-        md:bg-position-[center_right_-250]
-        bg-position-[center_right_-320]
+        md:bg-position-[75%_center]
+        bg-position-[70%_center]
         min-h-screen
         ">
         <Navbar />
-
-        <section className="flex flex-col gap-10 items-center mt-[10vh] sm:w-[45rem] sm:items-start sm:ml-[4vw] ">
+        {/* chatgpt dijo volver el section relativo y no el div y que los elementos dependan de esto pa tener mas control or sum bs like that */}
+        <section className="flex flex-col gap-10 items-center mt-[7vh] sm:mt-[10vh] sm:w-[45rem] sm:items-start sm:ml-[4vw] sm:max-w-[89vw]">
           <div className="relative">
-            <h1 className="text-[#0A5559] text-[3.8rem] sm:text-[5rem] md:text-[5rem] lg:text-[7.5rem] font-fugaz-one leading-[3.9rem] sm:leading-[6rem] md:leading-[6rem] lg:leading-[8rem]">
+            <h1 className="text-[#0A5559] text-[3.8rem] sm:text-[5rem] md:text-[5rem] lg:text-[7.5rem] font-fugaz-one leading-[3.9rem] sm:leading-[6rem] md:leading-[6rem] lg:leading-[8rem] ">
               GET YOUR
             </h1>
             <h1 className="text-[#0A5559] text-[3.8rem] sm:text-[5rem] md:text-[5rem] lg:text-[7.5rem] font-fugaz-one leading-[3.9rem] sm:leading-[6rem] md:leading-[6rem] lg:leading-[8rem]">
@@ -34,7 +40,7 @@ export default function Home() {
               alt="Artboard-11"
               width={1}
               height={1}
-              className="w-[5.5rem] sm:w-[7rem] md:w-[9rem] lg:w-[12rem] absolute top-[17.50%] left-[65.80%] sm:top-[18%] sm:left-[66%] md:top-[16.50%] md:left-[65%] lg:top-[17.50%] lg:left-[65.80%]"
+              className="w-[5.5rem] sm:w-[7rem] md:w-[9rem] lg:w-[12rem] absolute top-[17.50%] left-[65.80%] sm:top-[18%] sm:left-[66%] md:top-[16.50%] md:left-[65%] lg:top-[17.50%] lg:left-[65.80%] z-1"
             />
             {/* GREEN LEMON */}
             <Image 
@@ -42,7 +48,8 @@ export default function Home() {
               alt="Artboard-11"
               width={1}
               height={1}
-              className="w-[11rem] sm:w-[clamp(12rem,15.5vw,16rem)] absolute top-[240%] left-[58%] sm:top-[63vw] sm:left-[55vw] md:top-[45vw] md:left-[70vw] lg:top-[18vw] lg:left-[79vw]"
+              // problemas con overlapping
+              className="w-[10rem] [@media(max-height:840px)]:hidden max-[376px]:hidden sm:w-[clamp(12rem,15.5vw,16rem)] absolute top-[250%] left-[55%] sm:top-[63vw] sm:left-[55vw] md:top-[45vw] md:left-[69vw] lg:top-[18vw] lg:left-[79vw] z-1"
             />
             {/* 33 SIGN*/}
             <Image 
@@ -50,7 +57,8 @@ export default function Home() {
               alt="Artboard-11"
               width={1}
               height={1}
-              className="w-[9rem] sm:w-[clamp(rem,10vw,12rem)] absolute top-[250%] left-[1%] sm:top-[30vw] sm:left-[68vw] md:top-[18vw] md:left-[70vw] lg:top-[-0.5vw] lg:left-[80.5vw] "
+              // problemas con overlapping
+              className="w-[8rem] [@media(max-height:840px)]:hidden max-[376px]:hidden sm:w-[clamp(9rem,12vw,12rem)] absolute top-[260%] left-[4%] sm:top-[30vw] sm:left-[68vw] md:top-[18vw] md:left-[70vw] lg:top-[0.5vw] lg:left-[79.5vw] z-1"
             />
             {/* GREEN LOGO */}
             <Image 
@@ -58,7 +66,7 @@ export default function Home() {
               alt="Artboard-11"
               width={500}
               height={500}
-              className="w-[7rem] sm:w-[clamp(8.5rem,9.5vw,12rem)] absolute top-[-55%] left-[90%] sm:top-[-5.8vw] sm:left-[65vw] md:top-[-5.8vw] md:left-[61vw] lg:top-[-5.8vw] lg:left-[61vw] z-1000"
+              className="w-[7rem] [@media(max-height:570px)]:hidden sm:w-[clamp(8.5rem,9.5vw,12rem)] absolute top-[-55%] left-[75%] sm:top-[-5.8vw] sm:left-[65vw] md:top-[-5.8vw] md:left-[61vw] lg:top-[-5.8vw] lg:left-[61vw] z-100"
             />
           </div>
           <div className="mb-[0.5rem]">
@@ -84,10 +92,10 @@ export default function Home() {
                   </p>
               </div>
           </div>
-          <button type="submit" className="bg-[#EC5D34] font-fugaz-one text-white pr-[6em] pl-[4rem] py-[1rem] rounded-full cursor-pointer text-[1.3rem] flex justify-center items-center">
+          <button type="submit" className="bg-[#EC5D34] font-fugaz-one text-white pr-[4rem] pl-[4rem] sm:mb-[5rem] sm:pr-[6em] sm:pl-[4rem] py-[1rem] rounded-full cursor-pointer text-[1.3rem] flex justify-center items-center">
             SHOP NOW
             <svg 
-              className="inline ml-[1rem]"
+              className="hidden sm:inline ml-[1rem]"
               width="42" 
               height="20" 
               viewBox="0 0 42 20" 
@@ -101,31 +109,138 @@ export default function Home() {
         </section>
       </div>
 
-
-      <div className="bg-[#FFFCF4] min-h-full">
-        <section>
-            <div className="flex justify-between py-[3rem] px-[5rem]">
-                <h2 className="font-fugaz-one text-[#0A5559] text-[2.6rem]">
-                  Our products
-                </h2>
-                <h2 className="font-roboto font-[500] text-[#0A5559] text-[2.3rem]"> SEE ALL
-                  <svg 
-                    className="inline ml-[1rem]"
-                    width="42" 
-                    height="20" 
-                    viewBox="0 0 42 20" 
-                    fill="none" 
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M40.5 9.94339H1" stroke="currentcolor" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M40.5 9.9434L31.5566 1" stroke="currentcolor" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M40.5 9.94338L31.5566 18.8868" stroke="currentcolor" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </h2>
+      {/* max-w-[89vw] antes estaba en section pero se veia raro el scroll bar */}
+      <div className="bg-[#fff9e8] min-h-screen">
+        <section className="flex flex-col w-full mx-auto px-[1rem]">
+          {/* por que ml-20 */}
+            <div className="flex flex-col max-w-[89vw] items-start sm:items-center gap-4 ml-20 sm:flex-row sm:justify-between mb-[4rem] sm:mb-[2.5rem] mt-[4rem] sm:mt-[1rem] sm:py-[3rem]">
+                <h2 className="font-fugaz-one text-[#0A5559] text-[2.2rem] sm:text-[2.5rem]">
+                    Our products
+                  </h2>
+                  <h2 className="font-roboto font-medium text-[#0A5559] text-[1.5rem] sm:text-[2rem] md:text-[2.5rem]"> SEE ALL
+                    <svg 
+                      className="inline ml-4"
+                      width="42" 
+                      height="20" 
+                      viewBox="0 0 42 20" 
+                      fill="none" 
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M40.5 9.94339H1" stroke="currentcolor" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M40.5 9.9434L31.5566 1" stroke="currentcolor" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M40.5 9.94338L31.5566 18.8868" stroke="currentcolor" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </h2>
             </div>
-            <div>
-              
+            
+            <div className="flex gap-11 overflow-x-auto ml-20">
+              {
+                products.map((product, index) => (
+                    
+                  <div className="flex flex-col mb-5 justify-center items-center gap-6" key={product._id}>
+                      <div 
+                        className="h-[24rem] w-[14rem] relative rounded-[8rem] cursor-pointer" 
+                        style={{ backgroundColor: bgProductColor[index % bgProductColor.length]}}
+                      >
+                        <Image 
+                          src={`${product.imageUrl}`}
+                          alt={`${product.product_name}`}
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
+                      <div className="flex flex-col justify-center items-center gap-1.5">
+                        <div className="font-fugaz-one text-[#0A5559] text-[1.6rem]">
+                          {product.product_name}
+                        </div>
+                        <div className="font-roboto text-[#0A5559] text-[1rem]">
+                          {product.description}
+                        </div>
+                        <div className="font-fugaz-one text-[#7CCAC1] text-[2rem]">
+                          {product.price}.00 <span>{product.currency}</span>
+                        </div>
+                      </div>
+                  </div>
+                ))
+              }
             </div>
         </section>
+
+
+        <div className="pt-[2rem] bg-[#F9F2CE]  [@media(min-width:1515px)]:min-h-[110vh]">
+          <section className="flex flex-col lg:flex-row justify-center items-center sm:gap-45">
+              <div className="flex flex-col items-start gap-15 sm:gap-14 shrink sm:shrink-0 relative lg:ml-[-25] lg:pt-17">
+                <Image 
+                  src="/home_elements/image-9.svg"
+                  alt="image-9"
+                  width={1}
+                  height={1}
+                  className="object-contain w-[25rem] sm:w-[28rem] md:w-[39rem] lg:w-[42rem]"
+                />
+                <Image 
+                  src="/home_elements/Vector.svg"
+                  alt="image-9"
+                  width={10}
+                  height={10}
+                  className="absolute w-[3.5rem] sm:w-[3.9rem] md:w-[5rem] lg:w-[6rem] left-[84%] top-[-2.50%] sm:top-[-2%] sm:left-[84%] md:left-[84%] md:top-[-3%] lg:left-[84%] lg:top-[5%]"
+                />
+                <p className="font-roboto text-[#0A5559] text-[1.3rem] sm:text-[1.5rem] md:text-[1.9rem] leading-9.5 pl-3">
+                  For those busy days when you struggle <br />
+                  to eat balanced meals or get sufficient <br />
+                  vitamins and minerals, we are here to <br />
+                  support you. <br />
+                  Our mission is to deliver top-quality <br />
+                  nutrition for your immune system, <br />
+                  digestion, and more. At Super Herbo, <br />
+                  we are dedicated to crafting convenient <br />
+                  products that harness the power of <br />
+                  rescued fruits and vegetables, ensuring <br />
+                  you get all the essential nutrients <br />
+                  without any waste.
+                </p>
+              </div>
+              <div className="mr-[7vw] lg:ml-[10] relative lg:pt-17">
+                <Image 
+                  src="/home_elements/Poster-12.svg"
+                  alt="Poster-12"
+                  width={1}
+                  height={1}
+                  className="[@media(max-width:1515px)]:hidden object-contain w-full"
+                />
+                {/* ORANGE */}
+                <Image 
+                  src="/home_elements/orange.svg"
+                  alt="orange"
+                  width={1}
+                  height={1}
+                  className="absolute [@media(max-width:1515px)]:hidden w-[24rem] top-32 left-87"
+                />
+                {/* GREEN FOIL */}
+                <Image 
+                  src="/home_elements/foil_sachet_packaging_1.svg"
+                  alt="green-foil"
+                  width={1}
+                  height={1}
+                  className="absolute [@media(max-width:1515px)]:hidden w-[46rem] max-w-[100rem] top-72 right-30"
+                />
+                {/* PINK FOIL */}
+                <Image 
+                  src="/home_elements/foil_sachet_packaging_2.svg"
+                  alt="pink-foild"
+                  width={1}
+                  height={1}
+                  className="absolute [@media(max-width:1515px)]:hidden w-[28rem] max-w-[100rem] top-92.5 left-65"
+                />
+                {/* APPLE */}
+                <Image 
+                  src="/home_elements/apple.svg"
+                  alt="apple"
+                  width={1}
+                  height={1}
+                  className="absolute [@media(max-width:1515px)]:hidden w-[30rem] max-w-[100rem] top-[34rem] right-63"
+                />
+              </div>
+          </section>
+        </div>
       </div>
     </>
   );

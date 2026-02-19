@@ -39,6 +39,7 @@ const MobileNavbar = () => {
             fixed 
             top-0 
             left-0 
+            z-100
             h-screen
             w-[50vw]
             transition-all 
@@ -49,6 +50,7 @@ const MobileNavbar = () => {
         }>
             <div className={`
                 flex
+                z-50
                 flex-col
                 justify-between items-center
                 bg-[#0A5559]/90
