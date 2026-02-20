@@ -132,7 +132,7 @@ export default function Home() {
                   </h2>
             </div>
             
-            <div className="flex gap-11 overflow-x-auto">
+            <div className="flex gap-11 overflow-x-auto pl-20">
               {
                 products.map((product, index) => (
                     
