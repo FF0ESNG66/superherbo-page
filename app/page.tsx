@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import products from "@/app/productsDb"
+import React from "react"
 
 
 
@@ -8,6 +9,8 @@ export default function Home() {
   const bgProductColor = ["#EBE1AA", "#7CCAC1", "#f1c6d2"];
   return (
     <>
+
+      
       <div className="
         [@media(max-height:350px)]:bg-repeat
         [@media(max-height:350px)]:bg-cover
@@ -110,7 +113,7 @@ export default function Home() {
       </div>
 
       {/* max-w-[89vw] antes estaba en section pero se veia raro el scroll bar */}
-      <div className="bg-[#fff9e8] min-h-screen">
+      <div className="bg-[#fff9e8] min-h-[30vh] max-h-[100vh]">
         <section className="flex flex-col w-full mx-auto px-[1rem]">
           {/* por que ml-20 */}
             <div className="flex flex-col max-w-[89vw] items-start sm:items-center gap-4 ml-20 sm:flex-row sm:justify-between mb-[4rem] sm:mb-[2.5rem] mt-[4rem] sm:mt-[1rem] sm:py-[3rem]">
@@ -166,80 +169,191 @@ export default function Home() {
         </section>
 
 
-        <div className="pt-[2rem] bg-[#F9F2CE] [@media(min-width:1515px)]:min-h-[110vh]">
-          <section className="flex flex-col lg:flex-row justify-center items-center sm:gap-45 overflow-hidden pt-10 sm:pt-0">
-              <div className="flex flex-col items-start gap-15 sm:gap-14 shrink sm:shrink-0 relative lg:ml-[-25] lg:pt-17">
-                <Image 
-                  src="/home_elements/image-9.svg"
-                  alt="image-9"
-                  width={1}
-                  height={1}
-                  className="object-contain w-[25rem] sm:w-[28rem] md:w-[39rem] lg:w-[42rem]"
-                />
-                <Image 
-                  src="/home_elements/Vector.svg"
-                  alt="image-9"
-                  width={10}
-                  height={10}
-                  className="absolute w-[3.5rem] sm:w-[3.9rem] md:w-[5rem] lg:w-[6rem] left-[84%] top-[-2.50%] sm:top-[-2%] sm:left-[84%] md:left-[84%] md:top-[-3%] lg:left-[84%] lg:top-[5%]"
-                />
-                <p className="font-roboto text-[#0A5559] text-[1.3rem] sm:text-[1.5rem] md:text-[1.9rem] leading-9.5 pl-3">
-                  For those busy days when you struggle <br />
-                  to eat balanced meals or get sufficient <br />
-                  vitamins and minerals, we are here to <br />
-                  support you. <br />
-                  Our mission is to deliver top-quality <br />
-                  nutrition for your immune system, <br />
-                  digestion, and more. At Super Herbo, <br />
-                  we are dedicated to crafting convenient <br />
-                  products that harness the power of <br />
-                  rescued fruits and vegetables, ensuring <br />
-                  you get all the essential nutrients <br />
-                  without any waste.
-                </p>
+        <div className="overflow-hidden">
+
+          <div className="pt-[2rem] bg-[#F9F2CE] min-h-[90vh] md:min-h-[90vh] [@media(min-width:1515px)]:min-h-[120vh]">
+            <section className="flex flex-col lg:flex-row justify-center items-center sm:gap-45 pt-10 sm:pt-20 pb-40 sm:pb-10">
+                <div className="flex flex-col items-start text-[1.2rem] gap-15 sm:gap-14 shrink sm:shrink-0 relative lg:ml-[-25] lg:pt-17">
+                  <Image 
+                    src="/home_elements/image-9.svg"
+                    alt="image-9"
+                    width={1}
+                    height={1}
+                    className="object-contain w-[20rem] sm:w-[28rem] md:w-[39rem] lg:w-[42rem]"
+                  />
+                  <Image 
+                    src="/home_elements/Vector.svg"
+                    alt="image-9"
+                    width={10}
+                    height={10}
+                    className="absolute w-[2.8rem] sm:w-[3.9rem] md:w-[5rem] lg:w-[6rem] right-[10%] top-[-2.50%] sm:top-[-2%] sm:left-[84%] md:left-[84%] md:top-[-3%] lg:left-[84%] lg:top-[5%]"
+                  />
+                  <p className="font-roboto text-[#0A5559] sm:text-[1.5rem] md:text-[1.9rem] leading-9.5 pl-3">
+                    For those busy days when you struggle <br />
+                    to eat balanced meals or get sufficient <br />
+                    vitamins and minerals, we are here to <br />
+                    support you. <br />
+                    Our mission is to deliver top-quality <br />
+                    nutrition for your immune system, <br />
+                    digestion, and more. At Super Herbo, <br />
+                    we are dedicated to crafting convenient <br />
+                    products that harness the power of <br />
+                    rescued fruits and vegetables, ensuring <br />
+                    you get all the essential nutrients <br />
+                    without any waste.
+                  </p>
+                </div>
+                <div className="mr-[7vw] lg:ml-[10] relative lg:pt-17">
+                  <Image 
+                    src="/home_elements/Poster-12.svg"
+                    alt="Poster-12"
+                    width={1}
+                    height={1}
+                    className="[@media(max-width:1515px)]:hidden object-contain w-full"
+                  />
+                  {/* ORANGE */}
+                  <Image 
+                    src="/home_elements/orange.svg"
+                    alt="orange"
+                    width={1}
+                    height={1}
+                    className="absolute [@media(max-width:1515px)]:hidden w-[24rem] top-32 left-87"
+                  />
+                  {/* GREEN FOIL */}
+                  <Image 
+                    src="/home_elements/foil_sachet_packaging_1.svg"
+                    alt="green-foil"
+                    width={1}
+                    height={1}
+                    className="absolute [@media(max-width:1515px)]:hidden w-[46rem] max-w-[100rem] top-72 right-30"
+                  />
+                  {/* PINK FOIL */}
+                  <Image 
+                    src="/home_elements/foil_sachet_packaging_2.svg"
+                    alt="pink-foild"
+                    width={1}
+                    height={1}
+                    className="absolute [@media(max-width:1515px)]:hidden w-[28rem] max-w-[100rem] top-92.5 left-65"
+                  />
+                  {/* APPLE */}
+                  <Image 
+                    src="/home_elements/apple.svg"
+                    alt="apple"
+                    width={1}
+                    height={1}
+                    className="absolute [@media(max-width:1515px)]:hidden w-[30rem] max-w-[100rem] top-[34rem] right-63"
+                  />
+                </div>
+            </section>
+            
+          </div>
+
+          <div className="bg-[#FFFCF4] min-h-[100vh]">
+              <section className="flex flex-col justify-start items-start">
+                
+                <div className="relative w-[110vw] z-30 h-[4rem] sm:h-[6rem] rotate-[-7deg] sm:rotate-[-6deg] translate-x-[-5vw] top-[-2.50rem] sm:top-[-4.50rem]">
+                  <div className="flex gap-4 sm:gap-8 whitespace-nowrap absolute bg-[#ebe3ab] h-full items-center sm:py-2">
+                    {Array(10).fill(0).map((_, i) => (
+                      <React.Fragment key={i}>
+                        <p className="font-bebas-neue text-[#0A5559] text-[1.5rem] sm:text-[3.8rem]">
+                          NO ADDED SUGAR
+                        </p>
+                        <Image
+                          src="/home_elements/logo-green.svg"
+                          alt="green-logo"
+                          width={48}
+                          height={48}
+                          className="rotate-[-17.5deg] mt-[-4] sm:mt-[-10] w-[1.5rem]"
+                        />
+                      </React.Fragment>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="relative w-[110vw] z-20 h-[4rem] sm:h-[6rem] rotate-[8.50deg] sm:rotate-[6.50deg] translate-x-[-5vw] top-[-7rem] sm:top-[-12rem] w-[110vw]" >
+                  <div className="flex gap-4 sm:gap-8 whitespace-nowrap absolute bg-white items-center h-full items-center sm:py-2">
+                    {Array(10).fill(0).map((_, i) => (
+                      <React.Fragment key={i}>
+                        <p className="font-bebas-neue text-[#f6a7c4] text-[1.5rem] sm:text-[3.8rem]">
+                          NO ADDED SUGAR
+                        </p>
+                        <Image
+                          src="/home_elements/logo-pink.svg"
+                          alt="pink-logo"
+                          width={48}
+                          height={48}
+                          className="rotate-[-17.5deg] mt-[-4] sm:mt-[-10] w-[1.5rem]"
+                        />
+                      </React.Fragment>
+                    ))}
+                  </div>
+                </div>
+
+              <div className="flex flex-col items-center justify-center lg:flex-row h-[100vh] w-[100vw] mt-[-50] sm:mt-0">
+
+                  <div className="flex flex-col h-1/3 w-full bg-blue-200 justify-center items-center gap-5 sm:gap-9 shrink-0">
+                    <h1 className="min-w-[9em] shrink-0 font-fugaz-one text-[#0A5559] text-[2.5rem] sm:text-[3.3rem] md:text-[4.3rem] leading-[4rem] sm:leading-[5.6rem]">
+                      ONE SCOOP <br />
+                      ENDLESS ENERGY! 
+                    </h1>
+                    <button className="w-[20rem] sm:w-[24rem] py-[0.8rem] rounded-full border border-[#BF326F] cursor-pointer text-[1.5rem] flex justify-center items-center gap-3 font-fugaz-one text-[#BF326F]">
+                      SEE MORE BENEFITS
+
+                      <svg width="36" height="21" viewBox="0 0 36 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M34.1662 10.0264H1" stroke="#BF326F" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M34.1662 10.0263L26.6569 18.9697" stroke="#BF326F" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M34.1662 10.0264L26.6569 1.08301" stroke="#BF326F" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <div className="lg:hidden h-1/2 flex flex-col justify-center items-center gap-5 sm:gap-8 sm:mt-0  text-[1.5rem] sm:text-[2.2rem] w-[70%] bg-purple-200">
+                    <div className="flex flex-col items-center justify-center min-w-[8em] font-roboto text-[#BF326F] leading-6.5">
+                      <p>Better nails, hair and skin</p>
+                      
+                    </div>
+                    <div className="flex flex-col items-center justify-center w-full font-roboto text-[#BF326F] leading-6.5">
+                      <p>Natural-source</p>
+                      <p>vitamins & minerals</p>
+                    </div>
+                    <div className="flex flex-col items-center justify-center w-full font-roboto text-[#BF326F] leading-6.5">
+                      <p>Inmune System</p>
+                      <p>Booster</p>
+                    </div>
+                    
+                    
+                    <p className="hidden font-roboto text-[#BF326F] text-[1.4rem] w-[50%]">Inmune System Booster</p>
+                  </div>
+
+
+                  <div className="relative bg-red-200 w-full h-full">
+                    <Image 
+                      src={"home_elements/bigpote-2.svg"}
+                      alt="bigproduct"
+                      width={1}
+                      height={1}
+                      className="absolute object-contain h-[150%] w-full -translate-y-[20%]"
+                    />
+
+                    <Image 
+                      src={"home_elements/Vector-Curly.svg"}
+                      alt="Vector-Curly"
+                      width={1}
+                      height={1}
+                      className="hidden w-[3rem] absolute top-[100%]"
+                    />
+                    <p className="hidden font-roboto text-[#BF326F]">Better nails, hair and ksin</p>
+
+                    {/* <Image />
+                      <p></p>
+
+                    <Image />
+                      <p></p> */}
+                  </div>
               </div>
-              <div className="mr-[7vw] lg:ml-[10] relative lg:pt-17">
-                <Image 
-                  src="/home_elements/Poster-12.svg"
-                  alt="Poster-12"
-                  width={1}
-                  height={1}
-                  className="[@media(max-width:1515px)]:hidden object-contain w-full"
-                />
-                {/* ORANGE */}
-                <Image 
-                  src="/home_elements/orange.svg"
-                  alt="orange"
-                  width={1}
-                  height={1}
-                  className="absolute [@media(max-width:1515px)]:hidden w-[24rem] top-32 left-87"
-                />
-                {/* GREEN FOIL */}
-                <Image 
-                  src="/home_elements/foil_sachet_packaging_1.svg"
-                  alt="green-foil"
-                  width={1}
-                  height={1}
-                  className="absolute [@media(max-width:1515px)]:hidden w-[46rem] max-w-[100rem] top-72 right-30"
-                />
-                {/* PINK FOIL */}
-                <Image 
-                  src="/home_elements/foil_sachet_packaging_2.svg"
-                  alt="pink-foild"
-                  width={1}
-                  height={1}
-                  className="absolute [@media(max-width:1515px)]:hidden w-[28rem] max-w-[100rem] top-92.5 left-65"
-                />
-                {/* APPLE */}
-                <Image 
-                  src="/home_elements/apple.svg"
-                  alt="apple"
-                  width={1}
-                  height={1}
-                  className="absolute [@media(max-width:1515px)]:hidden w-[30rem] max-w-[100rem] top-[34rem] right-63"
-                />
-              </div>
-          </section>
+              
+              </section>
+            </div>
         </div>
       </div>
     </>
