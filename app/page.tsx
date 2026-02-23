@@ -248,10 +248,10 @@ export default function Home() {
             
           </div>
 
-          <div className="bg-[#FFFCF4] min-h-[100vh]">
-              <section className="flex flex-col justify-start items-start">
+          <div className="bg-[#FFFCF4] h-[110vh] min-h-[110vh] sm:h-[120vh] [@media(max-width:376px)]:h-[150vh]">
+            <section className="flex flex-col justify-start items-start h-full">
                 
-                <div className="relative w-[110vw] z-30 h-[4rem] sm:h-[6rem] rotate-[-7deg] sm:rotate-[-6deg] translate-x-[-5vw] top-[-2.50rem] sm:top-[-4.50rem]">
+              <div className="relative w-[110vw] z-30 h-[4rem] sm:h-[6rem] rotate-[-7deg] sm:rotate-[-6deg] translate-x-[-5vw] top-[-2.50rem] sm:top-[-4.50rem]">
                   <div className="flex gap-4 sm:gap-8 whitespace-nowrap absolute bg-[#ebe3ab] h-full items-center sm:py-2">
                     {Array(10).fill(0).map((_, i) => (
                       <React.Fragment key={i}>
@@ -268,9 +268,9 @@ export default function Home() {
                       </React.Fragment>
                     ))}
                   </div>
-                </div>
+              </div>
 
-                <div className="relative w-[110vw] z-20 h-[4rem] sm:h-[6rem] rotate-[8.50deg] sm:rotate-[6.50deg] translate-x-[-5vw] top-[-7rem] sm:top-[-12rem] w-[110vw]" >
+              <div className="relative w-[110vw] z-20 h-[4rem] sm:h-[6rem] rotate-[8.50deg] sm:rotate-[6.50deg] translate-x-[-5vw] top-[-7rem] sm:top-[-12rem] w-[110vw]" >
                   <div className="flex gap-4 sm:gap-8 whitespace-nowrap absolute bg-white items-center h-full items-center sm:py-2">
                     {Array(10).fill(0).map((_, i) => (
                       <React.Fragment key={i}>
@@ -287,11 +287,11 @@ export default function Home() {
                       </React.Fragment>
                     ))}
                   </div>
-                </div>
+              </div>
 
-              <div className="flex flex-col items-center justify-center lg:flex-row h-[100vh] w-[100vw] mt-[-50] sm:mt-0">
+              <div className="flex flex-1 flex-col items-center justify-between lg:flex-row h-full w-full mt-[-50] gap-10">
 
-                  <div className="flex flex-col h-1/3 w-full bg-blue-200 justify-center items-center gap-5 sm:gap-9 shrink-0">
+                  <div className="flex flex-col h-1/3 w-full justify-center items-center gap-5 sm:gap-9 shrink-0">
                     <h1 className="min-w-[9em] shrink-0 font-fugaz-one text-[#0A5559] text-[2.5rem] sm:text-[3.3rem] md:text-[4.3rem] leading-[4rem] sm:leading-[5.6rem]">
                       ONE SCOOP <br />
                       ENDLESS ENERGY! 
@@ -307,32 +307,63 @@ export default function Home() {
                     </button>
                   </div>
 
-                  <div className="lg:hidden h-1/2 flex flex-col justify-center items-center gap-5 sm:gap-8 sm:mt-0  text-[1.5rem] sm:text-[2.2rem] w-[70%] bg-purple-200">
-                    <div className="flex flex-col items-center justify-center min-w-[8em] font-roboto text-[#BF326F] leading-6.5">
-                      <p>Better nails, hair and skin</p>
+                  <div className="flex flex-col items-center justify-center h-1/2 w-full">
+                      <div className="flex w-full h-1/3">
+                        
+                          <div className="flex flex-1 justify-end items-center font-extrabold text-[1.5rem] text-[#BF326F] sm:pl-[8rem]">
+                            <p>&#9679;</p>
+                          </div>
+
+                          <div className="flex-3 flex flex-col items-center text-[1.5rem] justify-center font-roboto text-[#BF326F] leading-6.5">
+                            <p>Better nails, hair</p>
+                            <p>and skin</p>
+                          </div>
+
+                          <div className="flex-1 flex items-center font-extrabold text-[1.5rem] text-[#BF326F] sm:pr-[8rem]">
+                            <p>&#9679;</p>
+                          </div>
+
+                      </div>
+
+                      <div className="flex w-full h-1/3">
+                        <div className="flex flex-1 justify-end items-center font-extrabold text-[1.5rem] text-[#BF326F] sm:pl-[8rem]">
+                          <p>&#9679;</p>
+                        </div>
+                        <div className="flex-3 flex flex-col items-center justify-center font-roboto text-[#BF326F] leading-6.5 text-[1.5rem]">
+                          <p>Natural-source</p>
+                          <p>vitamins & minerals</p>
+                        </div>
+                        <div className="flex-1 flex items-center font-extrabold text-[1.5rem] text-[#BF326F] sm:pr-[8rem]">
+                          <p>&#9679;</p>
+                        </div>
+                      </div>
+
+                      <div className="flex w-full h-1/3">
+                        <div className="flex flex-1 justify-end items-center font-extrabold text-[1.5rem] text-[#BF326F] sm:pl-[8rem]">
+                          <p>&#9679;</p>
+                        </div>
+
+                        <div className="flex-3 flex flex-col items-center justify-center font-roboto text-[#BF326F] leading-6.5 text-[1.5rem]">
+                          <p>Inmune System</p>
+                          <p>Booster</p>
+                        </div>
+
+                        <div className="flex-1 flex items-center font-extrabold text-[1.5rem] text-[#BF326F] sm:pr-[8rem]">
+                          <p>&#9679;</p>
+                        </div>
+                      </div>
                       
-                    </div>
-                    <div className="flex flex-col items-center justify-center w-full font-roboto text-[#BF326F] leading-6.5">
-                      <p>Natural-source</p>
-                      <p>vitamins & minerals</p>
-                    </div>
-                    <div className="flex flex-col items-center justify-center w-full font-roboto text-[#BF326F] leading-6.5">
-                      <p>Inmune System</p>
-                      <p>Booster</p>
-                    </div>
-                    
-                    
-                    <p className="hidden font-roboto text-[#BF326F] text-[1.4rem] w-[50%]">Inmune System Booster</p>
+                      
                   </div>
-
-
-                  <div className="relative bg-red-200 w-full h-full">
+              </div>
+              
+              <div className="flex flex-1 relative w-full justify-center items-center bg-blue-200">
                     <Image 
                       src={"home_elements/bigpote-2.svg"}
                       alt="bigproduct"
                       width={1}
                       height={1}
-                      className="absolute object-contain h-[150%] w-full -translate-y-[20%]"
+                      className="absolute object-contain w-full [@media(max-width:376px)]:h-[60vh] h-[45vh] sm:h-[50vh] [@media(sm-width:376px)]:-translate-y-[10%]"
                     />
 
                     <Image 
@@ -349,11 +380,31 @@ export default function Home() {
 
                     <Image />
                       <p></p> */}
-                  </div>
+              </div>
+
+             {/* Volver esto un flex row mostrando las imagenes a la derecha pero cuando sea mobile que sea col sin imagenes */}
+              <div className="flex flex-1 flex-col h-1/3 w-full justify-center items-center sm:gap-9 sm:pl-5 shrink-0 bg-green-200">
+                <div className="flex flex-col justify-center w-full items-center sm:items-start min-w-[9em] shrink-0 font-fugaz-one text-[#0A5559] text-[2.9rem] sm:text-[3.3rem] md:text-[4.3rem] leading-[4rem] sm:leading-[5.6rem]">
+                  <h1 className="">
+                    FOLLOW US
+                  </h1>
+                  <h1>ON IG</h1>
+                </div>
+                
+                <div className="sm:justify-center sm:items-start items-top mx-5 w-full">
+                  <button className="w-full h-[50%] px-8 py-8 sm:w-[24rem] rounded-full cursor-pointer text-[1.5rem] sm:flex sm:justify-center items-center gap-3 font-fugaz-one text-white bg-[#EC5D34] leading-0 ">
+                    CHECK PROFILE
+                    <svg width="36" height="21" viewBox="0 0 36 21" fill="none" xmlns="http://www.w3.org/2000/svg" className="hidden sm:inline">
+                      <path d="M34.1662 10.0264H1" stroke="#BF326F" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M34.1662 10.0263L26.6569 18.9697" stroke="#BF326F" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M34.1662 10.0264L26.6569 1.08301" stroke="#BF326F" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
               </div>
               
-              </section>
-            </div>
+            </section>
+          </div>
         </div>
       </div>
     </>
