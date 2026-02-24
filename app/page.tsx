@@ -8,9 +8,7 @@ import React from "react"
 export default function Home() {
   const bgProductColor = ["#EBE1AA", "#7CCAC1", "#f1c6d2"];
   return (
-    <>
-
-      
+    <>  
       <div className="
         [@media(max-height:350px)]:bg-repeat
         [@media(max-height:350px)]:bg-cover
@@ -111,7 +109,6 @@ export default function Home() {
           </button>
         </section>
       </div>
-
       {/* max-w-[89vw] antes estaba en section pero se veia raro el scroll bar */}
       <div className="bg-[#fff9e8] min-h-[30vh] max-h-[100vh]">
         <section className="flex flex-col w-full mx-auto px-[1rem]">
@@ -171,15 +168,15 @@ export default function Home() {
 
         <div className="overflow-hidden">
 
-          <div className="pt-[2rem] bg-[#F9F2CE] min-h-[90vh] md:min-h-[90vh] [@media(min-width:1515px)]:min-h-[120vh]">
-            <section className="flex flex-col lg:flex-row justify-center items-center sm:gap-45 pt-10 sm:pt-20 pb-40 sm:pb-10">
+          <div className="pt-[2rem] bg-[#F9F2CE] lg:pb-[8rem]">
+            <section className="flex flex-col lg:flex-row justify-center items-center sm:gap-45 pt-10 sm:pt-20 pb-40 sm:pb-0">
                 <div className="flex flex-col items-start text-[1.2rem] gap-15 sm:gap-14 shrink sm:shrink-0 relative lg:ml-[-25] lg:pt-17">
                   <Image 
                     src="/home_elements/image-9.svg"
                     alt="image-9"
                     width={1}
                     height={1}
-                    className="object-contain w-[20rem] sm:w-[28rem] md:w-[39rem] lg:w-[42rem]"
+                    className="object-contain w-[20rem] sm:w-[28rem] md:w-[39rem] lg:w-[42rem] pl-3 sm:pl-0"
                   />
                   <Image 
                     src="/home_elements/Vector.svg"
@@ -248,11 +245,12 @@ export default function Home() {
             
           </div>
 
-          <div className="bg-[#FFFCF4] h-[110vh] min-h-[110vh] sm:h-[120vh] [@media(max-width:376px)]:h-[150vh]">
-            <section className="flex flex-col justify-start items-start h-full">
-                
-              <div className="relative w-[110vw] z-30 h-[4rem] sm:h-[6rem] rotate-[-7deg] sm:rotate-[-6deg] translate-x-[-5vw] top-[-2.50rem] sm:top-[-4.50rem]">
-                  <div className="flex gap-4 sm:gap-8 whitespace-nowrap absolute bg-[#ebe3ab] h-full items-center sm:py-2">
+          <div className="bg-[#FFFCF4]">
+
+            <div className="flex flex-col h-full items-center justify-center">
+
+                <div className="relative w-[110vw] z-30 h-[4rem] sm:h-[6rem] rotate-[-7deg] sm:rotate-[-4deg] lg:rotate-[-3deg] translate-x-[-5vw] top-[-2.50rem] sm:top-[-4.50rem] lg:top-[-2.50rem] overflow-hidden">
+                  <div className="flex w-max gap-4 sm:gap-8 whitespace-nowrap bg-[#ebe3ab] h-full items-center sm:py-2">
                     {Array(10).fill(0).map((_, i) => (
                       <React.Fragment key={i}>
                         <p className="font-bebas-neue text-[#0A5559] text-[1.5rem] sm:text-[3.8rem]">
@@ -263,36 +261,40 @@ export default function Home() {
                           alt="green-logo"
                           width={48}
                           height={48}
-                          className="rotate-[-17.5deg] mt-[-4] sm:mt-[-10] w-[1.5rem]"
+                          className="rotate-[-17.5deg] mt-[-4] sm:mt-[-10] w-[1.5rem] sm:w-[3rem]"
                         />
                       </React.Fragment>
                     ))}
                   </div>
-              </div>
+                </div>
 
-              <div className="relative w-[110vw] z-20 h-[4rem] sm:h-[6rem] rotate-[8.50deg] sm:rotate-[6.50deg] translate-x-[-5vw] top-[-7rem] sm:top-[-12rem] w-[110vw]" >
-                  <div className="flex gap-4 sm:gap-8 whitespace-nowrap absolute bg-white items-center h-full items-center sm:py-2">
-                    {Array(10).fill(0).map((_, i) => (
-                      <React.Fragment key={i}>
-                        <p className="font-bebas-neue text-[#f6a7c4] text-[1.5rem] sm:text-[3.8rem]">
-                          NO ADDED SUGAR
-                        </p>
-                        <Image
-                          src="/home_elements/logo-pink.svg"
-                          alt="pink-logo"
-                          width={48}
-                          height={48}
-                          className="rotate-[-17.5deg] mt-[-4] sm:mt-[-10] w-[1.5rem]"
-                        />
-                      </React.Fragment>
-                    ))}
+                <div className="relative w-[110vw] z-20 h-[4rem] sm:h-[6rem] rotate-[8.50deg] sm:rotate-[4deg] lg:rotate-[2.50deg] translate-x-[-5vw] top-[-7rem] sm:top-[-10rem] overflow-hidden">
+                  <div className="flex w-max gap-4 sm:gap-8 whitespace-nowrap bg-[#ebe3ab] h-full items-center sm:py-2">
+                  {Array(10).fill(0).map((_, i) => (
+                    <React.Fragment key={i}>
+                      <p className="font-bebas-neue text-[#f6a7c4] text-[1.5rem] sm:text-[3.8rem]">
+                        NO ADDED SUGAR
+                      </p>
+                      <Image
+                        src="/home_elements/logo-pink.svg"
+                        alt="pink-logo"
+                        width={48}
+                        height={48}
+                        className="rotate-[-17.5deg] mt-[-4] sm:mt-[-10] w-[1.5rem] sm:w-[3rem]"
+                      />
+                    </React.Fragment>
+                  ))}
                   </div>
-              </div>
+                </div>
 
-              <div className="flex flex-1 flex-col items-center justify-between lg:flex-row h-full w-full mt-[-50] gap-10">
+            </div>
 
-                  <div className="flex flex-col h-1/3 w-full justify-center items-center gap-5 sm:gap-9 shrink-0">
-                    <h1 className="min-w-[9em] shrink-0 font-fugaz-one text-[#0A5559] text-[2.5rem] sm:text-[3.3rem] md:text-[4.3rem] leading-[4rem] sm:leading-[5.6rem]">
+            <section className="flex flex-col h-full items-center justify-center lg:flex-row lg:items-start">    
+
+              <div className="flex md:flex-1 flex-col lg:flex-row w-full h-full gap-10 lg:ml-[5rem] bg-blue-200">
+
+                  <div className="flex flex-col h-1/3 lg:h-full w-[80%] lg:w-full justify-center items-center md:items-start gap-5 sm:gap-9 shrink-0">
+                    <h1 className="min-w-[9em] shrink-0 font-fugaz-one text-[#0A5559] text-[2.3rem] sm:text-[3.3rem] md:text-[4.3rem] leading-[4rem] sm:leading-[5.6rem]">
                       ONE SCOOP <br />
                       ENDLESS ENERGY! 
                     </h1>
@@ -306,8 +308,8 @@ export default function Home() {
                       </svg>
                     </button>
                   </div>
-
-                  <div className="flex flex-col items-center justify-center h-1/2 w-full">
+                  
+                  <div className="flex flex-col items-center justify-center h-1/2 w-full sm:hidden ">
                       <div className="flex w-full h-1/3">
                         
                           <div className="flex flex-1 justify-end items-center font-extrabold text-[1.5rem] text-[#BF326F] sm:pl-[8rem]">
@@ -357,56 +359,98 @@ export default function Home() {
                   </div>
               </div>
               
-              <div className="flex flex-1 relative w-full justify-center items-center bg-blue-200">
-                    <Image 
-                      src={"home_elements/bigpote-2.svg"}
-                      alt="bigproduct"
-                      width={1}
-                      height={1}
-                      className="absolute object-contain w-full [@media(max-width:376px)]:h-[60vh] h-[45vh] sm:h-[50vh] [@media(sm-width:376px)]:-translate-y-[10%]"
-                    />
+              <div className="flex relative md:flex-[3] lg:flex-1 w-full justify-center items-center lg:justify-start lg:items-start lg:translate-x-[-50%] min-h-[40vh] ">
+                  <Image 
+                    src={"home_elements/bigpote-2.svg"}
+                    alt="bigproduct"
+                    width={1}
+                    height={1}
+                    className="relative shrink-0 object-contain w-full sm:w-[90%] lg:max-w-[800px] h-[45vh] sm:h-[50vh] md:h-[64vh] [@media(min-height:1090px)]:max-h-[55vh] lg:scale-200 lg:mt-30"
+                  />
 
-                    <Image 
-                      src={"home_elements/Vector-Curly.svg"}
-                      alt="Vector-Curly"
-                      width={1}
-                      height={1}
-                      className="hidden w-[3rem] absolute top-[100%]"
-                    />
-                    <p className="hidden font-roboto text-[#BF326F]">Better nails, hair and ksin</p>
+                  <Image 
+                    src={"home_elements/Vector-Curly.svg"}
+                    alt="Vector-Curly"
+                    width={1}
+                    height={1}
+                    className="hidden w-[6rem] lg:w-[6rem] sm:inline sm:absolute left-[18%] sm:bottom-[30%] [@media(max-width:805px)]:left-[13%] [@media(orientation:landscape)]:left-[25%]"
+                  />
+                  <p className="hidden sm:inline sm:absolute font-roboto text-[#BF326F] text-[1.3rem] min-w-[8em] w-[11rem] text-center left-[4%] bottom-[38%]">Better nails, hair and skin</p>
 
-                    {/* <Image />
-                      <p></p>
 
-                    <Image />
-                      <p></p> */}
+                  <Image 
+                    src={"home_elements/curve-vector.svg"}
+                    alt="Vector-Curve"
+                    width={1}
+                    height={1}
+                    className="hidden w-[6rem] md:w-[5rem] lg:w-[11rem] sm:inline sm:absolute right-[21%] top-[16%] lg:right-[10%] lg:top-[5%] rotate-[-20deg] lg:rotate-0"
+                  />
+                  <p className="hidden sm:inline sm:absolute font-roboto text-[#BF326F] text-[1.3rem] min-w-[8em] lg:min-w-[9em] w-[11rem] lg:text-[2rem] text-center right-[3%] top-[5%] lg:right-[-26%] lg:top-[3%]">Natural-source vitamis & minerals</p>
+
+
+                  <Image 
+                    src={"home_elements/wave-vector.svg"}
+                    alt="Vector-Wave"
+                    width={1}
+                    height={1}
+                    className="hidden w-[6rem] lg:w-[10rem] sm:inline sm:absolute right-[23%] lg:right-[19%] bottom-[20%]"
+                  />
+                  <p className="hidden sm:inline sm:absolute font-roboto text-[#BF326F] text-[1.3rem] min-w-[8em] w-[11rem] text-center right-[2%] lg:right-[-1%] bottom-[22%]">Immune System Booster</p>
               </div>
 
-             {/* Volver esto un flex row mostrando las imagenes a la derecha pero cuando sea mobile que sea col sin imagenes */}
-              <div className="flex flex-1 flex-col h-1/3 w-full justify-center items-center sm:gap-9 sm:pl-5 shrink-0 bg-green-200">
-                <div className="flex flex-col justify-center w-full items-center sm:items-start min-w-[9em] shrink-0 font-fugaz-one text-[#0A5559] text-[2.9rem] sm:text-[3.3rem] md:text-[4.3rem] leading-[4rem] sm:leading-[5.6rem]">
-                  <h1 className="">
-                    FOLLOW US
-                  </h1>
-                  <h1>ON IG</h1>
-                </div>
-                
-                <div className="sm:justify-center sm:items-start items-top mx-5 w-full">
-                  <button className="w-full h-[50%] px-8 py-8 sm:w-[24rem] rounded-full cursor-pointer text-[1.5rem] sm:flex sm:justify-center items-center gap-3 font-fugaz-one text-white bg-[#EC5D34] leading-0 ">
-                    CHECK PROFILE
-                    <svg width="36" height="21" viewBox="0 0 36 21" fill="none" xmlns="http://www.w3.org/2000/svg" className="hidden sm:inline">
-                      <path d="M34.1662 10.0264H1" stroke="#BF326F" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M34.1662 10.0263L26.6569 18.9697" stroke="#BF326F" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M34.1662 10.0264L26.6569 1.08301" stroke="#BF326F" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              
             </section>
           </div>
+          
         </div>
+
+        <div className="flex flex-col md:flex-row w-full items-center justify-center sm:pl-5 py-10 bg-red-200">
+                          
+            <div className="flex flex-col justify-center items-center md:items-start w-[6em] md:w-[20%] min-w-[1em] md:min-w-[6em] shrink-0 font-fugaz-one text-[#0A5559] text-[2.9rem] sm:text-[3.3rem] md:text-[3rem] leading-[3.5rem] sm:leading-[5.6rem] md:leading-[4rem] gap-6 text-center sm:text-start">
+                        
+                <h1>FOLLOW US ON IG</h1>
+    
+
+                <button className="sm:w-[24rem] md:w-[16rem] h-full px-8 py-5 rounded-full cursor-pointer text-[1.5rem] md:text-[1.1rem] flex justify-center items-center gap-3 font-fugaz-one text-white bg-[#EC5D34] leading-0 ">
+                    CHECK PROFILE
+                    <svg width="36" height="21" viewBox="0 0 36 21" fill="none" xmlns="http://www.w3.org/2000/svg" className="hidden sm:inline md:w-[1.6rem]">
+                      <path d="M34.1662 10.0264H1" stroke="currentColor" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M34.1662 10.0263L26.6569 18.9697" stroke="currentColor" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M34.1662 10.0264L26.6569 1.08301" stroke="currentColor" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </button>
+
+            </div>
+                    
+            <div className="hidden md:flex flex-1 justify-start items-center h-[10vh] md:w-[80%] ">
+                <div className="relative w-full h-full flex md:justify-evenly">
+                      
+                  <Image 
+                      src={"home_elements/mask-group.svg"}
+                      alt="mask-group"
+                      width={1}
+                      height={1}
+                      className="w-[8.5rem]"
+                  />
+                  <Image 
+                      src={"home_elements/mask-group-2.svg"}
+                      alt="mask-group-2"
+                      width={1}
+                      height={1}
+                      className="w-[8.5rem]"
+                  />
+                  <Image 
+                      src={"home_elements/mask-group-3.svg"}
+                      alt="mask-group-3"
+                      width={1}
+                      height={1}
+                      className="w-[8.5rem]"
+                  />
+              </div>
+            </div>
+        </div>
+
       </div>
+      
     </>
   );
 }
