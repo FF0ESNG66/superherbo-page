@@ -249,7 +249,7 @@ export default function Home() {
 
             <div className="flex flex-col h-full items-center justify-center">
 
-                <div className="relative w-[110vw] z-30 h-[4rem] sm:h-[6rem] rotate-[-7deg] sm:rotate-[-4deg] lg:rotate-[-3deg] translate-x-[-5vw] top-[-2.50rem] sm:top-[-4.50rem] lg:top-[-2.50rem] overflow-hidden">
+                <div className="relative w-[110vw] z-30 h-[4rem] sm:h-[6rem] lg:h-[9rem] rotate-[-7deg] sm:rotate-[-4deg] md:rotate-[-6deg] lg:rotate-[-5deg] translate-x-[-5vw] top-[-2.50rem] sm:top-[-4.50rem] lg:top-[-4.50rem] overflow-hidden">
                   <div className="flex w-max gap-4 sm:gap-8 whitespace-nowrap bg-[#ebe3ab] h-full items-center sm:py-2">
                     {Array(10).fill(0).map((_, i) => (
                       <React.Fragment key={i}>
@@ -261,15 +261,15 @@ export default function Home() {
                           alt="green-logo"
                           width={48}
                           height={48}
-                          className="rotate-[-17.5deg] mt-[-4] sm:mt-[-10] w-[1.5rem] sm:w-[3rem]"
+                          className="rotate-[-17.5deg] mt-[-4] sm:mt-[-10] w-[1.5rem] sm:w-[3rem] lg:w-[3.5rem]"
                         />
                       </React.Fragment>
                     ))}
                   </div>
                 </div>
 
-                <div className="relative w-[110vw] z-20 h-[4rem] sm:h-[6rem] rotate-[8.50deg] sm:rotate-[4deg] lg:rotate-[2.50deg] translate-x-[-5vw] top-[-7rem] sm:top-[-10rem] overflow-hidden">
-                  <div className="flex w-max gap-4 sm:gap-8 whitespace-nowrap bg-[#ebe3ab] h-full items-center sm:py-2">
+                <div className="relative w-[110vw] z-20 h-[4rem] sm:h-[6rem] lg:h-[9rem] rotate-[8.50deg] sm:rotate-[4deg] md:rotate-[6deg] lg:rotate-[4deg] translate-x-[-5vw] top-[-7rem] sm:top-[-10rem] lg:top-[-15rem] overflow-hidden">
+                  <div className="flex w-max gap-4 sm:gap-8 whitespace-nowrap bg-white h-full items-center sm:py-2">
                   {Array(10).fill(0).map((_, i) => (
                     <React.Fragment key={i}>
                       <p className="font-bebas-neue text-[#f6a7c4] text-[1.5rem] sm:text-[3.8rem]">
@@ -280,7 +280,7 @@ export default function Home() {
                         alt="pink-logo"
                         width={48}
                         height={48}
-                        className="rotate-[-17.5deg] mt-[-4] sm:mt-[-10] w-[1.5rem] sm:w-[3rem]"
+                        className="rotate-[-17.5deg] mt-[-4] sm:mt-[-10] w-[1.5rem] sm:w-[3rem] lg:w-[3.5rem]"
                       />
                     </React.Fragment>
                   ))}
@@ -289,12 +289,17 @@ export default function Home() {
 
             </div>
 
-            <section className="flex flex-col h-full items-center justify-center lg:flex-row lg:items-start">    
+            <section className="flex flex-col items-center justify-center lg:flex-row lg:items-start lg:max-h-[110vh]">
 
-              <div className="flex md:flex-1 flex-col lg:flex-row w-full h-full gap-10 lg:ml-[5rem] bg-blue-200">
+              {/* 
+               1 - ARREGLAR TEMA CON LOS HORIZONTALES MOBILE
+               2 - TERMINAR LAYOUT LG:     
+              */}
 
-                  <div className="flex flex-col h-1/3 lg:h-full w-[80%] lg:w-full justify-center items-center md:items-start gap-5 sm:gap-9 shrink-0">
-                    <h1 className="min-w-[9em] shrink-0 font-fugaz-one text-[#0A5559] text-[2.3rem] sm:text-[3.3rem] md:text-[4.3rem] leading-[4rem] sm:leading-[5.6rem]">
+              <div className="flex md:flex-1 flex-col lg:flex-row w-full h-full gap-10 lg:ml-[5rem] items-center justify-center bg-blue-200">
+
+                  <div className="flex flex-col h-1/3 lg:h-full w-[80%] lg:w-full justify-center items-center md:items-start gap-5 sm:gap-9 shrink-0 lg:mt-[2rem] lg:ml-[5rem]">
+                    <h1 className="min-w-[9em] shrink-0 font-fugaz-one text-[#0A5559] text-[2.3rem] sm:text-[3.3rem] md:text-[4.3rem] lg:text-[4.4rem] leading-[4rem] sm:leading-[5.6rem]">
                       ONE SCOOP <br />
                       ENDLESS ENERGY! 
                     </h1>
@@ -359,13 +364,13 @@ export default function Home() {
                   </div>
               </div>
               
-              <div className="flex relative md:flex-[3] lg:flex-1 w-full justify-center items-center lg:justify-start lg:items-start lg:translate-x-[-50%] min-h-[40vh] ">
+              <div className="flex relative md:flex-[3] lg:flex-[3] w-full justify-center items-center lg:justify-start lg:items-start lg:translate-x-[-29%] lg:translate-y-[-14%]">
                   <Image 
                     src={"home_elements/bigpote-2.svg"}
                     alt="bigproduct"
                     width={1}
                     height={1}
-                    className="relative shrink-0 object-contain w-full sm:w-[90%] lg:max-w-[800px] h-[45vh] sm:h-[50vh] md:h-[64vh] [@media(min-height:1090px)]:max-h-[55vh] lg:scale-200 lg:mt-30"
+                    className="relative shrink-0 object-contain w-full sm:w-[90%] lg:max-w-[800px] h-[45vh] sm:h-[50vh] md:h-[64vh] [@media(min-height:1090px)]:max-h-[55vh] lg:w-[300%] lg:h-[300%] lg:max-w-[1100px]"
                   />
 
                   <Image 
@@ -403,16 +408,16 @@ export default function Home() {
           
         </div>
 
-        <div className="flex flex-col md:flex-row w-full items-center justify-center sm:pl-5 py-10 bg-red-200">
+        <div className="flex flex-col md:flex-row w-full items-end lg:items-start justify-end sm:pl-5 py-10 lg:flex-3 bg-red-200">
                           
-            <div className="flex flex-col justify-center items-center md:items-start w-[6em] md:w-[20%] min-w-[1em] md:min-w-[6em] shrink-0 font-fugaz-one text-[#0A5559] text-[2.9rem] sm:text-[3.3rem] md:text-[3rem] leading-[3.5rem] sm:leading-[5.6rem] md:leading-[4rem] gap-6 text-center sm:text-start">
+            <div className="flex flex-col font-fugaz-one text-[#0A5559] text-[2.9rem] sm:text-[3.3rem] md:text-[3rem] lg:text-[5rem] text-center justify-end items-end sm:text-start md:items-start lg:justify-start w-[6em] md:w-[20%] lg:w-[30%] min-w-[1em] md:min-w-[6em] shrink-0 leading-[3.5rem] sm:leading-[5.6rem] md:leading-[4rem] lg:leading-[6rem] gap-6 lg:gap-9.5 lg:pl-24">
                         
                 <h1>FOLLOW US ON IG</h1>
     
 
-                <button className="sm:w-[24rem] md:w-[16rem] h-full px-8 py-5 rounded-full cursor-pointer text-[1.5rem] md:text-[1.1rem] flex justify-center items-center gap-3 font-fugaz-one text-white bg-[#EC5D34] leading-0 ">
+                <button className="sm:w-[24rem] md:w-[16rem] lg:w-[20rem] h-full px-8 py-5 lg:py-5.5 rounded-full cursor-pointer text-[1.5rem] md:text-[1.1rem] lg:text-[1.5rem] flex justify-center items-center gap-3 font-fugaz-one text-white bg-[#EC5D34] leading-0 ">
                     CHECK PROFILE
-                    <svg width="36" height="21" viewBox="0 0 36 21" fill="none" xmlns="http://www.w3.org/2000/svg" className="hidden sm:inline md:w-[1.6rem]">
+                    <svg width="36" height="21" viewBox="0 0 36 21" fill="none" xmlns="http://www.w3.org/2000/svg" className="hidden sm:inline md:w-[1.6rem] lg:w-[2.5rem]">
                       <path d="M34.1662 10.0264H1" stroke="currentColor" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
                       <path d="M34.1662 10.0263L26.6569 18.9697" stroke="currentColor" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
                       <path d="M34.1662 10.0264L26.6569 1.08301" stroke="currentColor" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
@@ -421,29 +426,29 @@ export default function Home() {
 
             </div>
                     
-            <div className="hidden md:flex flex-1 justify-start items-center h-[10vh] md:w-[80%] ">
-                <div className="relative w-full h-full flex md:justify-evenly">
+            <div className="hidden md:flex flex-1 justify-start items-center h-[10vh] lg:h-full md:w-[80%] lg:w-[70%] pl-14">
+                <div className="relative w-full h-full flex md:justify-evenly lg:justify-center lg:gap-5">
                       
                   <Image 
                       src={"home_elements/mask-group.svg"}
                       alt="mask-group"
                       width={1}
                       height={1}
-                      className="w-[8.5rem]"
+                      className="w-[8.5rem] lg:w-[22.5rem]"
                   />
                   <Image 
                       src={"home_elements/mask-group-2.svg"}
                       alt="mask-group-2"
                       width={1}
                       height={1}
-                      className="w-[8.5rem]"
+                      className="w-[8.5rem] lg:w-[22.5rem]"
                   />
                   <Image 
                       src={"home_elements/mask-group-3.svg"}
                       alt="mask-group-3"
                       width={1}
                       height={1}
-                      className="w-[8.5rem]"
+                      className="w-[8.5rem] lg:w-[22.5rem]"
                   />
               </div>
             </div>
