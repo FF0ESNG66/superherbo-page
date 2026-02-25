@@ -169,7 +169,7 @@ export default function Home() {
         <div className="overflow-hidden">
 
           <div className="pt-[2rem] bg-[#F9F2CE] lg:pb-[8rem]">
-            <section className="flex flex-col lg:flex-row justify-center items-center sm:gap-45 pt-10 sm:pt-20 pb-40 sm:pb-0">
+            <section className="flex flex-col lg:flex-row justify-center items-center sm:gap-45 pt-10 lg:pt-0 sm:pt-20 pb-40 sm:pb-0 lg:pb-13">
                 <div className="flex flex-col items-start text-[1.2rem] gap-15 sm:gap-14 shrink sm:shrink-0 relative lg:ml-[-25] lg:pt-17">
                   <Image 
                     src="/home_elements/image-9.svg"
@@ -249,7 +249,7 @@ export default function Home() {
 
             <div className="flex flex-col h-full items-center justify-center">
 
-                <div className="relative w-[110vw] z-30 h-[4rem] sm:h-[6rem] lg:h-[9rem] rotate-[-7deg] sm:rotate-[-4deg] md:rotate-[-6deg] lg:rotate-[-5deg] translate-x-[-5vw] top-[-2.50rem] sm:top-[-4.50rem] lg:top-[-4.50rem] overflow-hidden">
+                <div className="relative w-[110vw] z-30 h-[4rem] sm:h-[6rem] lg:h-[9rem] rotate-[-7deg] sm:rotate-[-4deg] md:rotate-[-6deg] lg:rotate-[-5deg] translate-x-[-5vw] top-[-2.50rem] sm:top-[-4.50rem] lg:top-[-4.50rem]">
                   <div className="flex w-max gap-4 sm:gap-8 whitespace-nowrap bg-[#ebe3ab] h-full items-center sm:py-2">
                     {Array(10).fill(0).map((_, i) => (
                       <React.Fragment key={i}>
@@ -268,7 +268,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="relative w-[110vw] z-20 h-[4rem] sm:h-[6rem] lg:h-[9rem] rotate-[8.50deg] sm:rotate-[4deg] md:rotate-[6deg] lg:rotate-[4deg] translate-x-[-5vw] top-[-7rem] sm:top-[-10rem] lg:top-[-15rem] overflow-hidden">
+                <div className="relative w-[110vw] z-20 h-[4rem] sm:h-[6rem] lg:h-[9rem] rotate-[8.50deg] sm:rotate-[4deg] md:rotate-[6deg] lg:rotate-[4deg] translate-x-[-5vw] top-[-7rem] sm:top-[-10rem] lg:top-[-15rem]">
                   <div className="flex w-max gap-4 sm:gap-8 whitespace-nowrap bg-white h-full items-center sm:py-2">
                   {Array(10).fill(0).map((_, i) => (
                     <React.Fragment key={i}>
@@ -294,9 +294,13 @@ export default function Home() {
               {/* 
                1 - ARREGLAR TEMA CON LOS HORIZONTALES MOBILE
                2 - TERMINAR LAYOUT LG:     
+               
+               2/25/2026
+               1- Ocultar los vectores del display dell producto a partir de md: (default y sm: oculto)
+               2- FOLLOW US texto va justificado centro a partir de md: (default y sm: estara justificado centro)
               */}
 
-              <div className="flex md:flex-1 flex-col lg:flex-row w-full h-full gap-10 lg:ml-[5rem] items-center justify-center bg-blue-200">
+              <div className="flex md:flex-1 flex-col lg:flex-row w-full h-full gap-10 lg:ml-[5rem] items-center justify-center  ">
 
                   <div className="flex flex-col h-1/3 lg:h-full w-[80%] lg:w-full justify-center items-center md:items-start gap-5 sm:gap-9 shrink-0 lg:mt-[2rem] lg:ml-[5rem]">
                     <h1 className="min-w-[9em] shrink-0 font-fugaz-one text-[#0A5559] text-[2.3rem] sm:text-[3.3rem] md:text-[4.3rem] lg:text-[4.4rem] leading-[4rem] sm:leading-[5.6rem]">
@@ -378,9 +382,9 @@ export default function Home() {
                     alt="Vector-Curly"
                     width={1}
                     height={1}
-                    className="hidden w-[6rem] lg:w-[6rem] sm:inline sm:absolute left-[18%] sm:bottom-[30%] [@media(max-width:805px)]:left-[13%] [@media(orientation:landscape)]:left-[25%]"
+                    className="hidden w-[6rem] lg:w-[15rem] sm:inline sm:absolute left-[18%] sm:bottom-[30%] [@media(max-width:805px)]:left-[13%] lg:left-[-3%] lg:bottom-[33%]"
                   />
-                  <p className="hidden sm:inline sm:absolute font-roboto text-[#BF326F] text-[1.3rem] min-w-[8em] w-[11rem] text-center left-[4%] bottom-[38%]">Better nails, hair and skin</p>
+                  <p className="hidden sm:inline sm:absolute font-roboto text-[#BF326F] text-[1.3rem] lg:text-[2rem] min-w-[8em] w-[11rem] text-center left-[4%] bottom-[36%] lg:left-[-27%] lg:rotate-[-3deg] lg:leading-10">Better nails, hair and skin</p>
 
 
                   <Image 
@@ -388,9 +392,9 @@ export default function Home() {
                     alt="Vector-Curve"
                     width={1}
                     height={1}
-                    className="hidden w-[6rem] md:w-[5rem] lg:w-[11rem] sm:inline sm:absolute right-[21%] top-[16%] lg:right-[10%] lg:top-[5%] rotate-[-20deg] lg:rotate-0"
+                    className="hidden w-[6rem] md:w-[5rem] lg:w-[13rem] sm:inline sm:absolute right-[21%] top-[16%] lg:right-[7%] lg:top-[17%] rotate-[-20deg] lg:rotate-0"
                   />
-                  <p className="hidden sm:inline sm:absolute font-roboto text-[#BF326F] text-[1.3rem] min-w-[8em] lg:min-w-[9em] w-[11rem] lg:text-[2rem] text-center right-[3%] top-[5%] lg:right-[-26%] lg:top-[3%]">Natural-source vitamis & minerals</p>
+                  <p className="hidden sm:inline sm:absolute font-roboto text-[#BF326F] text-[1.3rem] min-w-[8em] lg:min-w-[9em] w-[11rem] lg:text-[2.2rem] text-center right-[3%] top-[5%] lg:right-[-25%] lg:top-[17%] lg:leading-10 lg:rotate-[-3deg]">Natural-source vitamis & minerals</p>
 
 
                   <Image 
@@ -398,9 +402,9 @@ export default function Home() {
                     alt="Vector-Wave"
                     width={1}
                     height={1}
-                    className="hidden w-[6rem] lg:w-[10rem] sm:inline sm:absolute right-[23%] lg:right-[19%] bottom-[20%]"
+                    className="hidden w-[6rem] lg:w-[16rem] sm:inline sm:absolute right-[23%] lg:right-[4%] lg:bottom-[32%] bottom-[20%]"
                   />
-                  <p className="hidden sm:inline sm:absolute font-roboto text-[#BF326F] text-[1.3rem] min-w-[8em] w-[11rem] text-center right-[2%] lg:right-[-1%] bottom-[22%]">Immune System Booster</p>
+                  <p className="hidden sm:inline sm:absolute font-roboto text-[#BF326F] text-[1.3rem] lg:text-[2.3rem] min-w-[8em] w-[11rem] text-center right-[2%] lg:right-[-25%] bottom-[22%] lg:bottom-[35%] lg:leading-10 lg:rotate-[-3deg]">Immune System Booster</p>
               </div>
 
             </section>
@@ -408,9 +412,9 @@ export default function Home() {
           
         </div>
 
-        <div className="flex flex-col md:flex-row w-full items-end lg:items-start justify-end sm:pl-5 py-10 lg:flex-3 bg-red-200">
+        <div className="flex flex-col md:flex-row w-full items-center justify-center lg:items-start lg:justify-end sm:pl-5 py-20 lg:flex-3 bg-[#FFFCF4]">
                           
-            <div className="flex flex-col font-fugaz-one text-[#0A5559] text-[2.9rem] sm:text-[3.3rem] md:text-[3rem] lg:text-[5rem] text-center justify-end items-end sm:text-start md:items-start lg:justify-start w-[6em] md:w-[20%] lg:w-[30%] min-w-[1em] md:min-w-[6em] shrink-0 leading-[3.5rem] sm:leading-[5.6rem] md:leading-[4rem] lg:leading-[6rem] gap-6 lg:gap-9.5 lg:pl-24">
+            <div className="flex flex-col font-fugaz-one text-[#0A5559] text-[2.9rem] sm:text-[3.3rem] md:text-[3rem] lg:text-[5rem] text-center justify-center items-center sm:text-start md:items-start lg:justify-start w-[6em] md:w-[20%] lg:w-[30%] min-w-[1em] md:min-w-[6em] shrink-0 leading-[3.5rem] sm:leading-[5.6rem] md:leading-[4rem] lg:leading-[6rem] gap-6 lg:gap-9.5 lg:pl-24">
                         
                 <h1>FOLLOW US ON IG</h1>
     
@@ -426,7 +430,8 @@ export default function Home() {
 
             </div>
                     
-            <div className="hidden md:flex flex-1 justify-start items-center h-[10vh] lg:h-full md:w-[80%] lg:w-[70%] pl-14">
+            <div className="hidden md:flex flex-1 justify-start items-center h-[10vh] md:h-full lg:w-[70%] pl-14">
+              
                 <div className="relative w-full h-full flex md:justify-evenly lg:justify-center lg:gap-5">
                       
                   <Image 
@@ -434,27 +439,117 @@ export default function Home() {
                       alt="mask-group"
                       width={1}
                       height={1}
-                      className="w-[8.5rem] lg:w-[22.5rem]"
+                      className="w-[8.5rem] sm:w-[11rem] lg:w-[22.5rem]"
                   />
                   <Image 
                       src={"home_elements/mask-group-2.svg"}
                       alt="mask-group-2"
                       width={1}
                       height={1}
-                      className="w-[8.5rem] lg:w-[22.5rem]"
+                      className="w-[8.5rem] sm:w-[11rem] lg:w-[22.5rem]"
                   />
                   <Image 
                       src={"home_elements/mask-group-3.svg"}
                       alt="mask-group-3"
                       width={1}
                       height={1}
-                      className="w-[8.5rem] lg:w-[22.5rem]"
+                      className="w-[8.5rem] sm:w-[11rem] lg:w-[22.5rem]"
                   />
               </div>
             </div>
         </div>
 
+
+        <div className="sm:h-[19vh] flex items-center justify-center sm:min-h-[19vh] shrink-0 bg-[url('/home_elements/footer.svg')] bg-cover bg-center bg-no-repeat">
+              
+                <div className="flex-1 sm:flex-[0.8] flex h-full justify-center items-center pb-5 bg-blue-400">
+                  <Image 
+                    src={"/home_elements/footer-icon.svg"}
+                    alt="footerIcon"
+                    width={1}
+                    height={1}
+                    className="w-[30%] sm:w-[50%] pt-5 sm:pt-0"
+                  /> 
+                </div>
+
+                <div className="flex-1 h-full flex sm:flex-col justify-center items-center gap-4 sm:gap-0 font-roboto text-[#0A5559] text-[1.2rem] text-start bg-red-400">
+                  <p className="hidden sm:inline w-[50%]">Store</p>
+                  <p className="hidden sm:inline w-[50%]">About us</p>
+                  <p className="hidden sm:inline w-[50%]">Benefits</p>
+                  <p className="hidden sm:inline w-[50%]">Contacts</p>
+                  <Image 
+                    src={"/home_elements/fb-icon.svg"}
+                    alt="fbIcon"
+                    width={1}
+                    height={1}
+                    className="w-[20%] sm:hidden"
+                  /> 
+                  <Image 
+                    src={"/home_elements/twitter-icon.svg"}
+                    alt="twIcon"
+                    width={1}
+                    height={1}
+                    className="w-[20%] sm:hidden"
+                  /> 
+                  <Image 
+                    src={"/home_elements/ig-icon.svg"}
+                    alt="igIcon"
+                    width={1}
+                    height={1}
+                    className="w-[20%] sm:hidden"
+                  /> 
+                  
+                </div>
+
+                <div className="hidden sm:flex flex-1 flex-[1.2] sm:flex-col sm:justify-center sm:items-start h-full font-roboto text-[#0A5559] text-[1.1rem] gap-1 bg-green-200 ">
+                  <p className="w-[70%]">Privacy Policy</p>
+                  <p className="w-full ">Terms and Conditions</p>
+                  <div className="w-full flex justify-center gap-4 mt-12">
+                      <Image 
+                        src={"/home_elements/fb-icon.svg"}
+                        alt="igIcon"
+                        width={1}
+                        height={1}
+                        className="w-[20%]"
+                      /> 
+                      <Image 
+                        src={"/home_elements/twitter-icon.svg"}
+                        alt="igIcon"
+                        width={1}
+                        height={1}
+                        className="w-[20%]"
+                      /> 
+                      <Image 
+                        src={"/home_elements/ig-icon.svg"}
+                        alt="igIcon"
+                        width={1}
+                        height={1}
+                        className="w-[20%]"
+                      /> 
+                  </div>
+                </div>
+
+               
+                <div className="hidden sm:flex h-full flex-1 sm:flex-[2.5] justify-center items-center bg-blue-500 ">
+                  <div className="flex flex-col h-full justify-center font-roboto text-[#0A5559] text-[1.3rem] sm:text-[1.4rem]  text-start">
+                    <p>Subscribe to our Newsletter</p>
+                    <div className="flex h-[25%] relative">
+                      <input type="text" className=" py-2 text-gray-700 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-white"/>
+                      <button type="submit" className="absolute right-0 top-0 h-full px-4 text-sm font-bold text-white bg-green-200 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-white">Join</button>
+                    </div>
+                    
+                      
+                    
+                  </div>
+                  
+                </div>
+              
+        </div>
+          
+        
+
       </div>
+      
       
     </>
   );
