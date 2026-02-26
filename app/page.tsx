@@ -93,7 +93,7 @@ export default function Home() {
                   </p>
               </div>
           </div>
-          <button type="submit" className="bg-[#EC5D34] font-fugaz-one text-white pr-[4rem] pl-[4rem] sm:mb-[5rem] sm:pr-[6em] sm:pl-[4rem] py-[1rem] rounded-full cursor-pointer text-[1.3rem] flex justify-center items-center">
+          <button type="submit" className="bg-[#EC5D34] font-fugaz-one text-white sm:mb-[5rem] w-[50%] py-[1rem] rounded-full cursor-pointer text-[1.3rem] flex justify-center items-center">
             SHOP NOW
             <svg 
               className="hidden sm:inline ml-[1rem]"
@@ -117,7 +117,7 @@ export default function Home() {
                 <h2 className="font-fugaz-one text-[#0A5559] text-[2.2rem] sm:text-[2.5rem]">
                     Our products
                   </h2>
-                  <h2 className="font-roboto font-medium text-[#0A5559] text-[1.5rem] sm:text-[2rem] md:text-[2.5rem]"> SEE ALL
+                  <h2 className="font-roboto font-medium text-[#0A5559] text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] cursor-pointer"> SEE ALL
                     <svg 
                       className="inline ml-4"
                       width="42" 
@@ -296,8 +296,8 @@ export default function Home() {
                2 - TERMINAR LAYOUT LG:     
                
                2/25/2026
-               1- Ocultar los vectores del display dell producto a partir de md: (default y sm: oculto)
-               2- FOLLOW US texto va justificado centro a partir de md: (default y sm: estara justificado centro)
+               1- Ocultar los vectores del display dell producto a partir de md: (default y sm: oculto) --- checked
+               2- FOLLOW US texto va justificado centro a partir de md: (default y sm: estara justificado centro) --- checked
               */}
 
               <div className="flex md:flex-1 flex-col lg:flex-row w-full h-full gap-10 lg:ml-[5rem] items-center justify-center  ">
@@ -318,7 +318,7 @@ export default function Home() {
                     </button>
                   </div>
                   
-                  <div className="flex flex-col items-center justify-center h-1/2 w-full sm:hidden ">
+                  <div className="flex flex-col items-center justify-center h-1/2 w-full md:hidden ">
                       <div className="flex w-full h-1/3">
                         
                           <div className="flex flex-1 justify-end items-center font-extrabold text-[1.5rem] text-[#BF326F] sm:pl-[8rem]">
@@ -368,7 +368,7 @@ export default function Home() {
                   </div>
               </div>
               
-              <div className="flex relative md:flex-[3] lg:flex-[3] w-full justify-center items-center lg:justify-start lg:items-start lg:translate-x-[-29%] lg:translate-y-[-14%]">
+              <div className="flex relative hidden md:flex md:flex-[3] lg:flex-[3] w-full justify-center items-center lg:justify-start lg:items-start lg:translate-x-[-29%] lg:translate-y-[-14%]">
                   <Image 
                     src={"home_elements/bigpote-2.svg"}
                     alt="bigproduct"
@@ -392,7 +392,7 @@ export default function Home() {
                     alt="Vector-Curve"
                     width={1}
                     height={1}
-                    className="hidden w-[6rem] md:w-[5rem] lg:w-[13rem] sm:inline sm:absolute right-[21%] top-[16%] lg:right-[7%] lg:top-[17%] rotate-[-20deg] lg:rotate-0"
+                    className="hidden w-[6rem] md:w-[5rem] lg:w-[13rem] sm:inline sm:absolute right-[21%] top-[16%] md:top-[18%] md:right-[23%] lg:right-[7%] lg:top-[17%] rotate-[-20deg] lg:rotate-0"
                   />
                   <p className="hidden sm:inline sm:absolute font-roboto text-[#BF326F] text-[1.3rem] min-w-[8em] lg:min-w-[9em] w-[11rem] lg:text-[2.2rem] text-center right-[3%] top-[5%] lg:right-[-25%] lg:top-[17%] lg:leading-10 lg:rotate-[-3deg]">Natural-source vitamis & minerals</p>
 
@@ -412,16 +412,20 @@ export default function Home() {
           
         </div>
 
-        <div className="flex flex-col md:flex-row w-full items-center justify-center lg:items-start lg:justify-end sm:pl-5 py-20 lg:flex-3 bg-[#FFFCF4]">
+        <div className="flex flex-col md:flex-row w-full items-center justify-center lg:items-start lg:justify-end sm:pl-5 py-20 sm:py-15 lg:flex-3 bg-[#FFFCF4]">
                           
-            <div className="flex flex-col font-fugaz-one text-[#0A5559] text-[2.9rem] sm:text-[3.3rem] md:text-[3rem] lg:text-[5rem] text-center justify-center items-center sm:text-start md:items-start lg:justify-start w-[6em] md:w-[20%] lg:w-[30%] min-w-[1em] md:min-w-[6em] shrink-0 leading-[3.5rem] sm:leading-[5.6rem] md:leading-[4rem] lg:leading-[6rem] gap-6 lg:gap-9.5 lg:pl-24">
+            <div className="flex flex-col lg:flex-[0.4] font-fugaz-one text-[#0A5559] text-[clamp(2.9rem,5vw,5rem)] shirnk-0 text-center justify-center items-center md:text-start md:items-start lg:justify-start leading-[clamp(4rem,7vw,7rem)] gap-6 lg:gap-9.5 lg:pl-24 lg:pr-10">
                         
-                <h1>FOLLOW US ON IG</h1>
+                <h1 className="flex flex-col">
+                  <span className="whitespace-nowrap">FOLLOW US</span>
+                  <span className="whitespace-nowrap">ON IG</span>
+                </h1>
+                
     
 
-                <button className="sm:w-[24rem] md:w-[16rem] lg:w-[20rem] h-full px-8 py-5 lg:py-5.5 rounded-full cursor-pointer text-[1.5rem] md:text-[1.1rem] lg:text-[1.5rem] flex justify-center items-center gap-3 font-fugaz-one text-white bg-[#EC5D34] leading-0 ">
+                <button className="w-[clamp(14rem,30vw,20rem)] h-full px-8 py-5 lg:py-5.5 rounded-full cursor-pointer text-[clamp(1rem,2vw,1.5rem)] flex justify-center items-center gap-3 font-fugaz-one text-white bg-[#EC5D34] leading-0 ">
                     CHECK PROFILE
-                    <svg width="36" height="21" viewBox="0 0 36 21" fill="none" xmlns="http://www.w3.org/2000/svg" className="hidden sm:inline md:w-[1.6rem] lg:w-[2.5rem]">
+                    <svg width="36" height="21" viewBox="0 0 36 21" fill="none" xmlns="http://www.w3.org/2000/svg" className="hidden md:inline md:w-[1.6rem] lg:w-[2.5rem]">
                       <path d="M34.1662 10.0264H1" stroke="currentColor" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
                       <path d="M34.1662 10.0263L26.6569 18.9697" stroke="currentColor" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
                       <path d="M34.1662 10.0264L26.6569 1.08301" stroke="currentColor" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
@@ -430,7 +434,7 @@ export default function Home() {
 
             </div>
                     
-            <div className="hidden md:flex flex-1 justify-start items-center h-[10vh] md:h-full lg:w-[70%] pl-14">
+            <div className="hidden md:flex flex-1 justify-start items-center h-[10vh] md:h-full pl-8">
               
                 <div className="relative w-full h-full flex md:justify-evenly lg:justify-center lg:gap-5">
                       
@@ -439,107 +443,104 @@ export default function Home() {
                       alt="mask-group"
                       width={1}
                       height={1}
-                      className="w-[8.5rem] sm:w-[11rem] lg:w-[22.5rem]"
+                      className="w-[clamp(9rem,18vw,22.5rem)]"
                   />
                   <Image 
                       src={"home_elements/mask-group-2.svg"}
                       alt="mask-group-2"
                       width={1}
                       height={1}
-                      className="w-[8.5rem] sm:w-[11rem] lg:w-[22.5rem]"
+                      className="w-[clamp(9rem,18vw,22.5rem)]"
                   />
                   <Image 
                       src={"home_elements/mask-group-3.svg"}
                       alt="mask-group-3"
                       width={1}
                       height={1}
-                      className="w-[8.5rem] sm:w-[11rem] lg:w-[22.5rem]"
+                      className="w-[clamp(9rem,18vw,22.5rem)]"
                   />
               </div>
             </div>
         </div>
 
 
-        <div className="sm:h-[19vh] flex items-center justify-center sm:min-h-[19vh] shrink-0 bg-[url('/home_elements/footer.svg')] bg-cover bg-center bg-no-repeat">
+        <div className="sm:h-[19vh] lg:h-[50vh] flex items-center justify-center sm:min-h-[19vh] shrink-0 bg-[url('/home_elements/footer.svg')] bg-cover bg-center bg-no-repeat">
               
-                <div className="flex-1 sm:flex-[0.8] flex h-full justify-center items-center pb-5 bg-blue-400">
+                <div className="flex-1 sm:flex-[0.8] lg:flex-1 flex h-full justify-center items-center pb-5 ">
                   <Image 
                     src={"/home_elements/footer-icon.svg"}
                     alt="footerIcon"
                     width={1}
                     height={1}
-                    className="w-[30%] sm:w-[50%] pt-5 sm:pt-0"
+                    className="w-[20%] sm:w-[50%] lg:w-[20%] pt-5 sm:pt-0"
                   /> 
                 </div>
 
-                <div className="flex-1 h-full flex sm:flex-col justify-center items-center gap-4 sm:gap-0 font-roboto text-[#0A5559] text-[1.2rem] text-start bg-red-400">
-                  <p className="hidden sm:inline w-[50%]">Store</p>
-                  <p className="hidden sm:inline w-[50%]">About us</p>
-                  <p className="hidden sm:inline w-[50%]">Benefits</p>
-                  <p className="hidden sm:inline w-[50%]">Contacts</p>
+                <div className="flex-1 lg:flex-[0.7] h-full flex sm:flex-col justify-center items-center gap-4 lg:gap-5 sm:gap-0 font-roboto text-[#0A5559] text-[1.2rem] lg:text-[1.4rem] text-start ">
+                  <p className="hidden sm:inline w-[52%]">Store</p>
+                  <p className="hidden sm:inline w-[52%] min-w-[4em]">About us</p>
+                  <p className="hidden sm:inline w-[52%]">Benefits</p>
+                  <p className="hidden sm:inline w-[52%]">Contacts</p>
                   <Image 
                     src={"/home_elements/fb-icon.svg"}
                     alt="fbIcon"
                     width={1}
                     height={1}
-                    className="w-[20%] sm:hidden"
+                    className="w-[15%] sm:hidden"
                   /> 
                   <Image 
                     src={"/home_elements/twitter-icon.svg"}
                     alt="twIcon"
                     width={1}
                     height={1}
-                    className="w-[20%] sm:hidden"
+                    className="w-[15%] sm:hidden"
                   /> 
                   <Image 
                     src={"/home_elements/ig-icon.svg"}
                     alt="igIcon"
                     width={1}
                     height={1}
-                    className="w-[20%] sm:hidden"
+                    className="w-[15%] sm:hidden"
                   /> 
                   
                 </div>
 
-                <div className="hidden sm:flex flex-1 flex-[1.2] sm:flex-col sm:justify-center sm:items-start h-full font-roboto text-[#0A5559] text-[1.1rem] gap-1 bg-green-200 ">
-                  <p className="w-[70%]">Privacy Policy</p>
+                <div className="hidden sm:flex flex-1 flex-[1.2] lg:flex-1 sm:flex-col sm:justify-center sm:items-start lg:pb-10 h-full font-roboto text-[#0A5559] text-[1.1rem] lg:text-[1.4rem] gap-1 lg:gap-4 ">
+                  <p className="w-[70%] min-w-[8em]">Privacy Policy</p>
                   <p className="w-full ">Terms and Conditions</p>
-                  <div className="w-full flex justify-center gap-4 mt-12">
+                  <div className="w-full flex justify-center lg:justify-start sm:mt-5 gap-4 lg:gap-6">
                       <Image 
                         src={"/home_elements/fb-icon.svg"}
                         alt="igIcon"
                         width={1}
                         height={1}
-                        className="w-[20%]"
+                        className="w-[20%] lg:w-[8%]"
                       /> 
                       <Image 
                         src={"/home_elements/twitter-icon.svg"}
                         alt="igIcon"
                         width={1}
                         height={1}
-                        className="w-[20%]"
+                        className="w-[20%] lg:w-[8%]"
                       /> 
                       <Image 
                         src={"/home_elements/ig-icon.svg"}
                         alt="igIcon"
                         width={1}
                         height={1}
-                        className="w-[20%]"
+                        className="w-[20%] lg:w-[8%]"
                       /> 
                   </div>
                 </div>
 
                
-                <div className="hidden sm:flex h-full flex-1 sm:flex-[2.5] justify-center items-center bg-blue-500 ">
-                  <div className="flex flex-col h-full justify-center font-roboto text-[#0A5559] text-[1.3rem] sm:text-[1.4rem]  text-start">
-                    <p>Subscribe to our Newsletter</p>
-                    <div className="flex h-[25%] relative">
-                      <input type="text" className=" py-2 text-gray-700 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-white"/>
-                      <button type="submit" className="absolute right-0 top-0 h-full px-4 text-sm font-bold text-white bg-green-200 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-white">Join</button>
-                    </div>
-                    
-                      
-                    
+                <div className="hidden sm:flex h-full w-full flex-1 sm:flex-[2.5] lg:flex-[1.5] justify-center items-center  ">
+                  <div className="flex flex-col h-full w-full justify-center font-roboto text-[#0A5559] sm:text-[1.1rem] lg:text-[1.3rem] text-start pl-10 lg:pl-0 gap-3">
+                    <p className="pl-3">Subscribe to our Newsletter</p>
+                    <div className="flex h-[30%] lg:h-[17%] w-[85%] lg:w-[70%] relative">
+                      <input type="text" placeholder="Email address" className="placeholder-[#0A5559] pl-6 pr-25 h-full w-full text-sm lg:text-lg text-[#0A5559] border rounded-full bg-white focus:outline-none"/>
+                      <button type="submit" className="absolute right-[3%] lg:right-[6%] top-[11%] lg:top-[17%] h-3/4 lg:h-4/6 w-[30%] lg:w-[22%] px-4 text-sm lg:text-base  text-[#0A5559] bg-[#88CAD7] rounded-full cursor-pointer">Join</button>
+                    </div>    
                   </div>
                   
                 </div>
