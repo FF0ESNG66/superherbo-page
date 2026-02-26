@@ -1,12 +1,31 @@
+"use client"
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import products from "@/app/productsDb"
 import React from "react"
+import { useRef } from 'react';
+import { gsap } from "gsap";
+import { useGSAP } from '@gsap/react';
 
 
 
 export default function Home() {
   const bgProductColor = ["#EBE1AA", "#7CCAC1", "#f1c6d2"];
+  const bottomImages = useRef<HTMLDivElement | null>(null);
+
+  useGSAP(() => {
+    if (!bottomImages.current) return;
+
+    gsap.from(bottomImages.current.children, {
+      opacity: 0,
+      x: 100,
+      ease: "back.out(1.7)",
+      duration: 1.5,
+      stagger: 0.5
+    })
+  });
+
+
   return (
     <>  
       <div className="
@@ -93,7 +112,7 @@ export default function Home() {
                   </p>
               </div>
           </div>
-          <button type="submit" className="bg-[#EC5D34] font-fugaz-one text-white sm:mb-[5rem] w-[50%] py-[1rem] rounded-full cursor-pointer text-[1.3rem] flex justify-center items-center">
+          <button type="submit" className="bg-[#EC5D34] font-fugaz-one text-white sm:mb-[5rem] w-[45%] py-[1rem] rounded-full cursor-pointer text-[1.3rem] flex justify-center items-center">
             SHOP NOW
             <svg 
               className="hidden sm:inline ml-[1rem]"
@@ -319,21 +338,18 @@ export default function Home() {
                   </div>
                   
                   <div className="flex flex-col items-center justify-center h-1/2 w-full md:hidden ">
+
                       <div className="flex w-full h-1/3">
-                        
                           <div className="flex flex-1 justify-end items-center font-extrabold text-[1.5rem] text-[#BF326F] sm:pl-[8rem]">
                             <p>&#9679;</p>
                           </div>
-
                           <div className="flex-3 flex flex-col items-center text-[1.5rem] justify-center font-roboto text-[#BF326F] leading-6.5">
                             <p>Better nails, hair</p>
                             <p>and skin</p>
                           </div>
-
                           <div className="flex-1 flex items-center font-extrabold text-[1.5rem] text-[#BF326F] sm:pr-[8rem]">
                             <p>&#9679;</p>
                           </div>
-
                       </div>
 
                       <div className="flex w-full h-1/3">
@@ -353,12 +369,10 @@ export default function Home() {
                         <div className="flex flex-1 justify-end items-center font-extrabold text-[1.5rem] text-[#BF326F] sm:pl-[8rem]">
                           <p>&#9679;</p>
                         </div>
-
                         <div className="flex-3 flex flex-col items-center justify-center font-roboto text-[#BF326F] leading-6.5 text-[1.5rem]">
                           <p>Inmune System</p>
                           <p>Booster</p>
                         </div>
-
                         <div className="flex-1 flex items-center font-extrabold text-[1.5rem] text-[#BF326F] sm:pr-[8rem]">
                           <p>&#9679;</p>
                         </div>
@@ -368,43 +382,50 @@ export default function Home() {
                   </div>
               </div>
               
-              <div className="flex relative hidden md:flex md:flex-[3] lg:flex-[3] w-full justify-center items-center lg:justify-start lg:items-start lg:translate-x-[-29%] lg:translate-y-[-14%]">
-                  <Image 
-                    src={"home_elements/bigpote-2.svg"}
-                    alt="bigproduct"
-                    width={1}
-                    height={1}
-                    className="relative shrink-0 object-contain w-full sm:w-[90%] lg:max-w-[800px] h-[45vh] sm:h-[50vh] md:h-[64vh] [@media(min-height:1090px)]:max-h-[55vh] lg:w-[300%] lg:h-[300%] lg:max-w-[1100px]"
-                  />
+              <div className="flex relative md:flex md:flex-[3] lg:flex-[3] w-full justify-center items-center lg:justify-start lg:items-start lg:translate-x-[-29%] lg:translate-y-[-14%]">
+                <div className="relative shrink-0 object-contain w-full sm:w-[90%] lg:max-w-[800px] h-[45vh] sm:h-[50vh] md:h-[64vh] [@media(min-height:1090px)]:max-h-[55vh] lg:w-[300%] lg:h-[300%] lg:max-w-[1100px]">
+                    <Image 
+                      src={"home_elements/bigpote-2.svg"}
+                      alt="bigproduct"
+                      width={1}
+                      height={1}
+                      className="w-full h-full"
+                    />
 
-                  <Image 
-                    src={"home_elements/Vector-Curly.svg"}
-                    alt="Vector-Curly"
-                    width={1}
-                    height={1}
-                    className="hidden w-[6rem] lg:w-[15rem] sm:inline sm:absolute left-[18%] sm:bottom-[30%] [@media(max-width:805px)]:left-[13%] lg:left-[-3%] lg:bottom-[33%]"
-                  />
-                  <p className="hidden sm:inline sm:absolute font-roboto text-[#BF326F] text-[1.3rem] lg:text-[2rem] min-w-[8em] w-[11rem] text-center left-[4%] bottom-[36%] lg:left-[-27%] lg:rotate-[-3deg] lg:leading-10">Better nails, hair and skin</p>
+                    <div>
+                      <Image 
+                        src={"home_elements/Vector-Curly.svg"}
+                        alt="Vector-Curly"
+                        width={1}
+                        height={1}
+                        className="hidden w-[6rem] lg:w-[15rem] sm:inline sm:absolute left-[18%] sm:bottom-[30%] [@media(max-width:805px)]:left-[13%] lg:left-[-3%] lg:bottom-[33%]"
+                      />
+                      <p className="hidden sm:inline sm:absolute font-roboto text-[#BF326F] text-[1.3rem] lg:text-[2rem] min-w-[8em] w-[11rem] text-center left-[4%] bottom-[36%] lg:left-[-27%] lg:rotate-[-3deg] lg:leading-10">Better nails, hair and skin</p>
+                    </div>
+                    
 
+                    <div>
+                      <Image 
+                        src={"home_elements/curve-vector.svg"}
+                        alt="Vector-Curve"
+                        width={1}
+                        height={1}
+                        className="hidden w-[6rem] md:w-[5rem] lg:w-[13rem] sm:inline sm:absolute right-[21%] top-[16%] md:top-[18%] md:right-[23%] lg:right-[7%] lg:top-[17%] rotate-[-20deg] lg:rotate-0"
+                      />
+                      <p className="hidden sm:inline sm:absolute font-roboto text-[#BF326F] text-[1.3rem] min-w-[8em] lg:min-w-[9em] w-[11rem] lg:text-[2.2rem] text-center right-[3%] top-[5%] lg:right-[-25%] lg:top-[17%] lg:leading-10 lg:rotate-[-3deg]">Natural-source vitamis & minerals</p>
+                    </div>
 
-                  <Image 
-                    src={"home_elements/curve-vector.svg"}
-                    alt="Vector-Curve"
-                    width={1}
-                    height={1}
-                    className="hidden w-[6rem] md:w-[5rem] lg:w-[13rem] sm:inline sm:absolute right-[21%] top-[16%] md:top-[18%] md:right-[23%] lg:right-[7%] lg:top-[17%] rotate-[-20deg] lg:rotate-0"
-                  />
-                  <p className="hidden sm:inline sm:absolute font-roboto text-[#BF326F] text-[1.3rem] min-w-[8em] lg:min-w-[9em] w-[11rem] lg:text-[2.2rem] text-center right-[3%] top-[5%] lg:right-[-25%] lg:top-[17%] lg:leading-10 lg:rotate-[-3deg]">Natural-source vitamis & minerals</p>
-
-
-                  <Image 
-                    src={"home_elements/wave-vector.svg"}
-                    alt="Vector-Wave"
-                    width={1}
-                    height={1}
-                    className="hidden w-[6rem] lg:w-[16rem] sm:inline sm:absolute right-[23%] lg:right-[4%] lg:bottom-[32%] bottom-[20%]"
-                  />
-                  <p className="hidden sm:inline sm:absolute font-roboto text-[#BF326F] text-[1.3rem] lg:text-[2.3rem] min-w-[8em] w-[11rem] text-center right-[2%] lg:right-[-25%] bottom-[22%] lg:bottom-[35%] lg:leading-10 lg:rotate-[-3deg]">Immune System Booster</p>
+                    <div>
+                      <Image 
+                        src={"home_elements/wave-vector.svg"}
+                        alt="Vector-Wave"
+                        width={1}
+                        height={1}
+                        className="hidden w-[6rem] lg:w-[16rem] sm:inline sm:absolute right-[23%] lg:right-[4%] lg:bottom-[32%] bottom-[20%]"
+                      />
+                      <p className="hidden sm:inline sm:absolute font-roboto text-[#BF326F] text-[1.3rem] lg:text-[2.3rem] min-w-[8em] w-[11rem] text-center right-[2%] lg:right-[-25%] bottom-[22%] lg:bottom-[35%] lg:leading-10 lg:rotate-[-3deg]">Immune System Booster</p>
+                    </div>
+                  </div>
               </div>
 
             </section>
@@ -416,9 +437,8 @@ export default function Home() {
                           
             <div className="flex flex-col lg:flex-[0.4] font-fugaz-one text-[#0A5559] text-[clamp(2.9rem,5vw,5rem)] shirnk-0 text-center justify-center items-center md:text-start md:items-start lg:justify-start leading-[clamp(4rem,7vw,7rem)] gap-6 lg:gap-9.5 lg:pl-24 lg:pr-10">
                         
-                <h1 className="flex flex-col">
-                  <span className="whitespace-nowrap">FOLLOW US</span>
-                  <span className="whitespace-nowrap">ON IG</span>
+                <h1 className="flex flex-col whitespace-nowrap">
+                  FOLLOW US <br/>ON IG
                 </h1>
                 
     
@@ -436,7 +456,7 @@ export default function Home() {
                     
             <div className="hidden md:flex flex-1 justify-start items-center h-[10vh] md:h-full pl-8">
               
-                <div className="relative w-full h-full flex md:justify-evenly lg:justify-center lg:gap-5">
+                <div ref={bottomImages} className="relative w-full h-full flex md:justify-evenly lg:justify-center lg:gap-5">
                       
                   <Image 
                       src={"home_elements/mask-group.svg"}
@@ -464,7 +484,7 @@ export default function Home() {
         </div>
 
 
-        <div className="sm:h-[19vh] lg:h-[50vh] flex items-center justify-center sm:min-h-[19vh] shrink-0 bg-[url('/home_elements/footer.svg')] bg-cover bg-center bg-no-repeat">
+        <div className="min-h-[50vh] lg:h-[30vh] max-h-[30vh] flex flex-col sm:flex-row items-start sm:items-center sm:justify-center sm:min-h-[19vh] shrink-0 bg-[url('/home_elements/footer.svg')] bg-cover bg-center bg-no-repeat">
               
                 <div className="flex-1 sm:flex-[0.8] lg:flex-1 flex h-full justify-center items-center pb-5 ">
                   <Image 
@@ -472,40 +492,44 @@ export default function Home() {
                     alt="footerIcon"
                     width={1}
                     height={1}
-                    className="w-[20%] sm:w-[50%] lg:w-[20%] pt-5 sm:pt-0"
+                    className="w-[50%] sm:w-[50%] lg:w-[20%] pt-5 sm:pt-0"
                   /> 
                 </div>
 
-                <div className="flex-1 lg:flex-[0.7] h-full flex sm:flex-col justify-center items-center gap-4 lg:gap-5 sm:gap-0 font-roboto text-[#0A5559] text-[1.2rem] lg:text-[1.4rem] text-start ">
-                  <p className="hidden sm:inline w-[52%]">Store</p>
-                  <p className="hidden sm:inline w-[52%] min-w-[4em]">About us</p>
-                  <p className="hidden sm:inline w-[52%]">Benefits</p>
-                  <p className="hidden sm:inline w-[52%]">Contacts</p>
+                <div className="flex-1 lg:flex-[0.7] h-full flex flex-col items-start px-8 sm:px-0 justify-start sm:justify-center sm:items-center gap-4 lg:gap-5 sm:gap-0 font-roboto text-[#0A5559] text-[1.2rem] lg:text-[1.4rem] text-start ">
+                  <p className=" whitespace-nowrap sm:w-[52%]">Store</p>
+                  <p className=" whitespace-nowrap sm:w-[52%] sm:min-w-[4em]">About us</p>
+                  <p className=" sm:w-[52%]">Benefits</p>
+                  <p className=" sm:w-[52%]">Contacts</p>
+
+                  <div className="flex gap-4">
+
                   <Image 
                     src={"/home_elements/fb-icon.svg"}
                     alt="fbIcon"
                     width={1}
                     height={1}
-                    className="w-[15%] sm:hidden"
+                    className="w-[30%] sm:hidden"
                   /> 
                   <Image 
                     src={"/home_elements/twitter-icon.svg"}
                     alt="twIcon"
                     width={1}
                     height={1}
-                    className="w-[15%] sm:hidden"
+                    className="w-[30%] sm:hidden"
                   /> 
                   <Image 
                     src={"/home_elements/ig-icon.svg"}
                     alt="igIcon"
                     width={1}
                     height={1}
-                    className="w-[15%] sm:hidden"
+                    className="w-[30%] sm:hidden"
                   /> 
+                  </div>
                   
                 </div>
 
-                <div className="hidden sm:flex flex-1 flex-[1.2] lg:flex-1 sm:flex-col sm:justify-center sm:items-start lg:pb-10 h-full font-roboto text-[#0A5559] text-[1.1rem] lg:text-[1.4rem] gap-1 lg:gap-4 ">
+                <div className="hidden md:flex flex-1 flex-[1.2] lg:flex-1 sm:flex-col sm:justify-center sm:items-start lg:pb-12 h-full font-roboto text-[#0A5559] text-[1.1rem] lg:text-[1.4rem] gap-1 lg:gap-4 ">
                   <p className="w-[70%] min-w-[8em]">Privacy Policy</p>
                   <p className="w-full ">Terms and Conditions</p>
                   <div className="w-full flex justify-center lg:justify-start sm:mt-5 gap-4 lg:gap-6">
@@ -534,12 +558,12 @@ export default function Home() {
                 </div>
 
                
-                <div className="hidden sm:flex h-full w-full flex-1 sm:flex-[2.5] lg:flex-[1.5] justify-center items-center  ">
+                <div className="hidden sm:flex h-full w-full flex-1 sm:flex-[2.5] lg:flex-[1.5] lg:pb-12 justify-center items-center  ">
                   <div className="flex flex-col h-full w-full justify-center font-roboto text-[#0A5559] sm:text-[1.1rem] lg:text-[1.3rem] text-start pl-10 lg:pl-0 gap-3">
                     <p className="pl-3">Subscribe to our Newsletter</p>
-                    <div className="flex h-[30%] lg:h-[17%] w-[85%] lg:w-[70%] relative">
-                      <input type="text" placeholder="Email address" className="placeholder-[#0A5559] pl-6 pr-25 h-full w-full text-sm lg:text-lg text-[#0A5559] border rounded-full bg-white focus:outline-none"/>
-                      <button type="submit" className="absolute right-[3%] lg:right-[6%] top-[11%] lg:top-[17%] h-3/4 lg:h-4/6 w-[30%] lg:w-[22%] px-4 text-sm lg:text-base  text-[#0A5559] bg-[#88CAD7] rounded-full cursor-pointer">Join</button>
+                    <div className="flex h-[30%] lg:h-[10vh] w-[85%] lg:w-[80%] relative">
+                      <input type="text" placeholder="Email address" className="placeholder-[#0A5559] pl-6 pr-25 h-full w-full text-sm lg:text-lg text-[#0A5559]  rounded-full bg-white focus:outline-none"/>
+                      <button type="submit" className="absolute right-[3%] lg:right-[6%] top-[11%] lg:top-[17%] h-3/4 lg:h-4/6 w-[30%] lg:w-[22%] px-4 text-sm lg:text-xl  text-[#0A5559] bg-[#88CAD7] rounded-full cursor-pointer">Join</button>
                     </div>    
                   </div>
                   
